@@ -1,0 +1,68 @@
+{% extends 'header.html' %}
+{% load i18n %} 
+
+{% load static %}
+{% block content %}
+
+    
+  <!-- Services Section -->
+  <div class="w3-container w3-center w3-white" style="padding:95px 8px" id="Div2">
+      <div class="w3-row">
+          <div class="col-xs-12">
+              <img class="img-responsive" src="{% static 'images/home_01.jpg' %}" style="width:50%;">
+          </div>
+      </div>
+      <div class="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153) '>
+          <div class="font_AG">
+                  <strong> {% trans "SOFTWARE ENGINEERING SPECIALISTS" %}</strong>
+                  <br />
+                  <span style='color:black'>
+                  <strong>{% trans "Algosoft" %}</strong>
+                  {% trans " is an independent engineering office with highly qualified engineers from the areas of electrical and computer engineering." %}
+                  </span>
+          </div>
+      </div>
+  
+      <div class ="w3-center-align we-row w3-padding" style='color:rgb(0,102,153); '>
+          <div class="font_AG">
+                  <strong>{% trans "PASSION FOR SOFTWARE-DEVELOPMENT" %}</strong>
+                  <br />
+                  <span style='color:black'> {% trans "On specification! On time! On cost!" %}
+                  <br />
+                  {% trans "We support software development of your products from the definition of the specification and system design of your product until the start of production and further." %}
+                </span>
+          </div>
+      </div>
+  
+      <div class ="w3-center-align w3-row w3-padding" style='color:rgb(0,102,153);'>
+          <div class="font_AG">
+              <strong>
+                  {% trans "RELIABLE PARTNERSHIPS" %}
+              </strong>
+              <br />
+              <span style='color:black'>
+                {% trans "We can offer engineering personnel or students from university engineering departments as outsource for direct integration on your running projects or work completely independent on the parts of your product. " %}
+              </span>
+          </div>
+      </div>
+  
+      <div class ="w3-center-align w3-row w3-padding" style='color:rgb(0,102,153);'>
+          <div class="font_AG">
+                  <strong>
+                  {% trans "Outsource your software, small or big tasks, straight to us – we will take care for it in professional way! " %}
+                    <br />
+                  {% trans "Contact us - we will find a way to work together!" %}
+                  </strong>
+          </div>
+      </div>
+  </div>
+  
+  
+  <div class="w3-container w3-light-grey w3-padding-large">
+    <div class="w3-row">
+       <div class="w3-right">
+          <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="about">{% trans "About us"%} &raquo;</a>
+      </div>
+    </div>
+  </div>
+  {% endblock %}

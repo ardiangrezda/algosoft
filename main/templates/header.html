@@ -1,0 +1,169 @@
+{% load i18n %} 
+
+<!DOCTYPE html>
+<html>
+<title>About</title>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.5;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+
+@media (min-width: 1281px) {
+  div.font_AG_small {
+    font-size: 23px;
+    font-family:Constantia;
+  }
+
+  div.font_AG {
+    font-size: 25px;
+    font-family:Constantia;
+  }
+  div.font_AG_large {
+    font-size: 27px;
+    font-family:Constantia;
+  }
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  div.font_AG_small {
+    font-size: 21px;
+    font-family:Constantia;
+  }
+
+  div.font_AG {
+    font-size: 23px;
+    font-family:Constantia;
+  }
+  div.font_AG_large {
+    font-size: 25px;
+    font-family:Constantia;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  div.font_AG_small {
+    font-size: 19px;
+    font-family:Constantia;
+  }
+
+  div.font_AG {
+    font-size: 21px;
+    font-family:Constantia;
+  }
+  div.font_AG_large {
+    font-size: 23px;
+    font-family:Constantia;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  div.font_AG_small {
+    font-size: 17px;
+    font-family:Constantia;
+  }
+
+  div.font_AG {
+    font-size: 19px;
+    font-family:Constantia;
+  }
+  div.font_AG_large {
+    font-size: 21px;
+    font-family:Constantia;
+  }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  div.font_AG_small {
+    font-size: 15px;
+    font-family:Constantia;
+  }
+
+  div.font_AG {
+    font-size: 17px;
+    font-family:Constantia;
+  }
+  div.font_AG_large {
+    font-size: 19px;
+    font-family:Constantia;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    div.font_AG_small {
+    font-size: 13px;
+    font-family:Constantia;
+  }
+
+  div.font_AG {
+    font-size: 15px;
+    font-family:Constantia;
+  }
+  div.font_AG_large {
+    font-size: 17px;
+    font-family:Constantia;
+  }
+}
+
+</style>
+
+
+<head>
+    {% load static %}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<header>
+  {% include 'top.html' %}
+</header>
+
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <div class="font_AG_small"> 
+        &#9400;<span style='color:rgb(0,102,153)'>algosoft.com. All rights reserved. 
+  </div>
+</footer>
+

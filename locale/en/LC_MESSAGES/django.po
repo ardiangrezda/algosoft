@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-02 10:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\Algosoft\settings.py:107
+msgid "English"
+msgstr ""
+
+#: .\Algosoft\settings.py:108
+msgid "German"
+msgstr ""
+
+#: .\main\templates\about.html:15
+msgid "WHO WE ARE - WHAT WE KNOW - WHAT WE CAN DO "
+msgstr ""
+
+#: .\main\templates\about.html:18
+msgid ""
+"We are a group of engineers with expertise in software engineering and "
+"development."
+msgstr ""
+
+#: .\main\templates\about.html:20
+msgid ""
+"Also, we have experience in maintaining databases, building Windows "
+"application from scratch, building web application and web services, "
+"creating small scripts for automation of different jobs. "
+msgstr ""
+
+#: .\main\templates\about.html:27
+msgid "OUR PASSION"
+msgstr ""
+
+#: .\main\templates\about.html:30
+msgid ""
+"We share our passion for software development with our engineers and with "
+"our customers."
+msgstr ""
+
+#: .\main\templates\about.html:39
+msgid "Home"
+msgstr ""
+
+#: .\main\templates\about.html:42 .\main\templates\contact.html:41
+msgid "Services"
+msgstr ""
+
+#: .\main\templates\contact.html:16
+msgid "HEAD OFFICE"
+msgstr ""
+
+#: .\main\templates\contact.html:22
+msgid "ALGOSOFT"
+msgstr ""
+
+#: .\main\templates\contact.html:25
+msgid "Rr. Ahmet Krasniqi C2, hyrja 10"
+msgstr ""
+
+#: .\main\templates\contact.html:26
+msgid "Prishtine"
+msgstr ""
+
+#: .\main\templates\contact.html:27
+msgid "Kosovo"
+msgstr ""
+
+#: .\main\templates\home.html:17
+msgid "SOFTWARE ENGINEERING SPECIALISTS"
+msgstr ""
+
+#: .\main\templates\home.html:20
+msgid "Algosoft"
+msgstr ""
+
+#: .\main\templates\home.html:21
+msgid ""
+" is an independent engineering office with highly qualified engineers from "
+"the areas of electrical and computer engineering."
+msgstr ""
+
+#: .\main\templates\home.html:28
+msgid "PASSION FOR SOFTWARE-DEVELOPMENT"
+msgstr ""
+
+#: .\main\templates\home.html:30
+msgid "On specification! On time! On cost!"
+msgstr ""
+
+#: .\main\templates\home.html:32
+msgid ""
+"We support software development of your products from the definition of the "
+"specification and system design of your product until the start of "
+"production and further."
+msgstr ""
+
+#: .\main\templates\home.html:40
+msgid "RELIABLE PARTNERSHIPS"
+msgstr ""
+
+#: .\main\templates\home.html:44
+msgid ""
+"We can offer engineering personnel or students from university engineering "
+"departments as outsource for direct integration on your running projects or "
+"work completely independent on the parts of your product. "
+msgstr ""
+
+#: .\main\templates\home.html:52
+msgid ""
+"Outsource your software, small or big tasks, straight to us – we will take "
+"care for it in professional way! "
+msgstr ""
+
+#: .\main\templates\home.html:54
+msgid "Contact us - we will find a way to work together!"
+msgstr ""
+
+#: .\main\templates\home.html:64 .\main\templates\services data
+#: services.html:69 software.html:61 .\main\templates\services.html:49
+msgid "About us"
+msgstr ""
+
+#: .\main\templates\services data services.html:13
+#: .\main\templates\services.html:34
+msgid "DATA SERVICES AND MACHINE LEARNING"
+msgstr ""
+
+#: .\main\templates\services data services.html:22
+msgid "DATA SERVICES"
+msgstr ""
+
+#: .\main\templates\services data services.html:23
+msgid "DATA SERVICES: DIVERSE USER REQUIREMENTS AND APPLICATIONS"
+msgstr ""
+
+#: .\main\templates\services data services.html:28
+msgid ""
+"Use of PYTHON as a tool for extracting data into pandas and other readable "
+"format."
+msgstr ""
+
+#: .\main\templates\services data services.html:29
+msgid "Making different graphs based on data acquired"
+msgstr ""
+
+#: .\main\templates\services data services.html:32
+msgid ""
+"Data visualization using PYTHON libraries such as matplotlib, seaborn, "
+"bookeh, etc."
+msgstr ""
+
+#: .\main\templates\services data services.html:33
+msgid "Drawing GDP growth for different countries"
+msgstr ""
+
+#: .\main\templates\services data services.html:36
+msgid ""
+"Artificial Intelligence (AI) and Machine Learning using sklearn, keras and "
+"other PYTHON libraries"
+msgstr ""
+
+#: .\main\templates\services data services.html:37
+msgid "Making graphics/histogram for different parties during election"
+msgstr ""
+
+#: .\main\templates\services data services.html:41
+msgid "Prediction approving a loan for a customer"
+msgstr ""
+
+#: .\main\templates\services data services.html:45
+msgid "Predict median value of a house"
+msgstr ""
+
+#: .\main\templates\services data services.html:49
+msgid "Predict purchased amount for a customer"
+msgstr ""
+
+#: .\main\templates\services data services.html:53
+msgid "Predict total sales for every product and store in the next month"
+msgstr ""
+
+#: .\main\templates\services data services.html:61 software.html:53
+msgid "Back to services"
+msgstr ""
+
+#: .\main\templates\services data services.html:72 software.html:64
+#: .\main\templates\services.html:52
+msgid "Contact"
+msgstr ""
+
+#: .\main\templates\services software.html:13 .\main\templates\services.html:24
+msgid "SOFTWARE DEVELOPMENT"
+msgstr ""
+
+#: .\main\templates\services software.html:22
+msgid "SOFTWARE DEVELOPMENT: TOOLS AND PROJECTS"
+msgstr ""
+
+#: .\main\templates\services software.html:23
+msgid "SOFTWARE DEVELOPMENT: DIVERSE  USER REQUIREMENTS AND APPLICATIONS"
+msgstr ""
+
+#: .\main\templates\services software.html:28
+msgid ""
+"Building desktop windows application using languages such as C#, VB.net, etc"
+msgstr ""
+
+#: .\main\templates\services software.html:29
+msgid "Making a simple website as required by customer."
+msgstr ""
+
+#: .\main\templates\services software.html:32
+msgid "Script building using python, perl, etc."
+msgstr ""
+
+#: .\main\templates\services software.html:33
+msgid ""
+"Making website which includes database connection, administration and "
+"manipulation"
+msgstr ""
+
+#: .\main\templates\services software.html:36
+msgid ""
+"Design databases, writing queries, query optimization, database "
+"administration using Oracle 10g, MS-SQL, mysql, etc."
+msgstr ""
+
+#: .\main\templates\services software.html:37
+msgid "Creating a desktop application as required by customer"
+msgstr ""
+
+#: .\main\templates\services software.html:40
+msgid "Building web application using asp.net, php, python, etc"
+msgstr ""
+
+#: .\main\templates\services software.html:41
+msgid "Creating desktop application for a university"
+msgstr ""
+
+#: .\main\templates\services software.html:44
+msgid "Mobile application for IOS and Android operating system"
+msgstr ""
+
+#: .\main\templates\services software.html:45
+msgid "Creating desktop application for a hospital or medical institution"
+msgstr ""
+
+#: .\main\templates\services.html:15
+msgid "CLICK FOR THE SERVICES THAT OUR ENGINNERS CAN OFFER"
+msgstr ""
+
+#: .\main\templates\services.html:26 .\main\templates\services.html:36
+msgid "Products"
+msgstr ""
+
+#: .\main\templates\top.html:10 .\main\templates\top.html:42
+msgid "CONTACT"
+msgstr ""
