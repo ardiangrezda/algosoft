@@ -1,4 +1,4 @@
-#!c:\python projects\algosoft\myvirtualenv\scripts\python.exe
+#!C:\Python projects\Algosoft\myvirtualenv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
