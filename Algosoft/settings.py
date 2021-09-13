@@ -25,7 +25,7 @@ SECRET_KEY = 'i%b4g(ol@f*d)n4!sdx8#4n_5w%9w#v2&e!@z0x6v+d#e^rpz8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'algosoft.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'algosoft.herokuapp.com', 'algosoftii.com']
 
 
 # Application definition
