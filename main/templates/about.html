@@ -2,47 +2,51 @@
 {% load i18n %} 
 
 {% load static %}
+
 {% block content %}
+  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
+      <div class="w3-row-padding-16" >
+        <img class="w3-image" src="{% static 'images/about-us.jpg' %}" style="width:50%;">
+      </div>
 
-<!-- Services Section -->
-<div class="w3-container w3-center w3-white" style="padding:95px 8px" id="Div2">
-     <div class="w3-row-padding-16" >
-      <img class="w3-image" src="{% static 'images/about-us.jpg' %}" style="width:50%;">
-     </div>
+      <div class="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153); '>
+          <div class="font_AG">
+            <strong>{% trans "WHO WE ARE - WHAT WE KNOW - WHAT WE CAN DO " %} </strong>
+              <p>
+                <div class="font_AG_small">
+                  <span style='color:black'>
+                    {% trans "We are a group of engineers with expertise in software engineering and development." %}
+                    <br />
+                    {% trans "Also, we have experience in maintaining databases, building Windows application from scratch, building web application and web services, creating small scripts for automation of different jobs. " %}
+                    </span>
+                </div>
+              </p>
+          </div>
+      </div>
 
-    <div class="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153); '>
-        <div class="font_AG">
-                <strong>{% trans "WHO WE ARE - WHAT WE KNOW - WHAT WE CAN DO " %} </strong>
-                <br />
-                <span style='color:black'>
-                {% trans "We are a group of engineers with expertise in software engineering and development." %}
-                <br />
-                {% trans "Also, we have experience in maintaining databases, building Windows application from scratch, building web application and web services, creating small scripts for automation of different jobs. " %}
-                </span>
-        </div>
-    </div>
-
-    <div class ="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153); '>
-        <div class="font_AG">
-                <strong>{% trans "OUR PASSION" %}</strong>
-                <br />
+      <div class ="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153); '>
+          <div class="font_AG">
+            <strong>{% trans "OUR PASSION" %}</strong>
+              <p>
+                <div class="font_AG_small">
                 <span style='color:black'>
                     {% trans "We share our passion for software development with our engineers and with our customers." %}
                 </span>
-        </div>
-    </div>
-</div>
+              </div>
+            </p>
+          </div>
+      </div>
+  </div>
 
-<div class="w3-container w3-light-grey w3-padding-large">
-  <div class="w3-row">
-     <div class="w3-left">
-      <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/">&#171; {% trans "Home" %} </a>
-    </div>
-     <div class="w3-right">
-      <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/services">{% trans "Services" %} &raquo;</a>
+  <div class="w3-container w3-light-grey w3-padding-large">
+    <div class="w3-row">
+      <div class="w3-left">
+        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}">&#171; {% trans "Home" %} </a>
+      </div>
+      <div class="w3-right">
+          <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/services">{% trans "Services" %} &raquo;</a>
+      </div>
     </div>
   </div>
-</div>
-
 
 {% endblock %}

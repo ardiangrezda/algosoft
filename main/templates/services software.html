@@ -2,68 +2,66 @@
 {% load i18n %} 
 
 {% load static %}
+
 {% block content %}
+  <!-- Services software Section -->
+  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
+      <div class="w3-center-align w3-row w3-padding-32" style='color:rgb(0,102,153); '>
+          <div class="font_AG_large">
+            <strong>{% trans "SOFTWARE DEVELOPMENT" %} </strong>
+          </div>
+      </div>
 
+      <div class="w3-responsive w3-card-4">
+          <div class="font_AG_small">
+              <table class="w3-table w3-striped w3-border">
+                  <thead>
+                  <tr class="w3-theme w3-red">
+                      <th>{% trans "SOFTWARE DEVELOPMENT: TOOLS AND PROJECTS" %}</th>
+                      <th>{% trans "SOFTWARE DEVELOPMENT: DIVERSE  USER REQUIREMENTS AND APPLICATIONS" %}</th>
+                  </tr>
+                  </thead>
+              <tbody>
+              <tr>
+                <td><li>{% trans "Building desktop windows application using languages such as C#, VB.net, etc" %}</li></td>
+                <td><li>{% trans "Making a simple website as required by customer." %}</li></td> 
+              </tr>
+              <tr>
+                <td><li>{% trans "Script building using python, perl, etc." %}</li></td>
+                <td><li>{% trans "Making website which includes database connection, administration and manipulation" %} </li></td>
+              </tr>
+              <tr>
+                <td><li>{% trans "Design databases, writing queries, query optimization, database administration using Oracle 10g, MS-SQL, mysql, etc." %}</li></td>
+                <td><li>{% trans "Creating a desktop application as required by customer" %} </li></td>
+              </tr>
+              <tr>
+                <td><li>{% trans "Building web application using asp.net, php, python, etc" %} </li></td>
+                <td><li>{% trans "Creating desktop application for a university" %} </li></td>
+              </tr>
+              <tr>
+                <td><li>{% trans "Mobile application for IOS and Android operating system" %}</li></td>
+                <td><li>{% trans "Creating desktop application for a hospital or medical institution" %}</li></td>
+              </tr>
+              </tbody>
+          </table>
+          </div>
+      </div>
 
-
-<!-- Services Section -->
-<div class="w3-container w3-center w3-white" style="padding:95px 8px" id="Div2">
-    <div class="w3-center-align w3-row w3-padding-32" style='color:rgb(0,102,153); '>
-        <div class="font_AG_large">
-                <strong>{% trans "SOFTWARE DEVELOPMENT" %} </strong>
-        </div>
-    </div>
-
-    <div class="w3-responsive w3-card-4">
-        <div class="font_AG_small">
-            <table class="w3-table w3-striped w3-border">
-                <thead>
-                 <tr class="w3-theme w3-red">
-                    <th>{% trans "SOFTWARE DEVELOPMENT: TOOLS AND PROJECTS" %}</th>
-                    <th>{% trans "SOFTWARE DEVELOPMENT: DIVERSE  USER REQUIREMENTS AND APPLICATIONS" %}</th>
-                </tr>
-                </thead>
-            <tbody>
-            <tr>
-              <td><li>{% trans "Building desktop windows application using languages such as C#, VB.net, etc" %}</li></td>
-              <td><li>{% trans "Making a simple website as required by customer." %}</li></td> 
-            </tr>
-             <tr>
-              <td><li>{% trans "Script building using python, perl, etc." %}</li></td>
-              <td><li>{% trans "Making website which includes database connection, administration and manipulation" %} </li></td>
-            </tr>
-             <tr>
-              <td><li>{% trans "Design databases, writing queries, query optimization, database administration using Oracle 10g, MS-SQL, mysql, etc." %}</li></td>
-              <td><li>{% trans "Creating a desktop application as required by customer" %} </li></td>
-            </tr>
-            <tr>
-              <td><li>{% trans "Building web application using asp.net, php, python, etc" %} </li></td>
-              <td><li>{% trans "Creating desktop application for a university" %} </li></td>
-            </tr>
-            <tr>
-              <td><li>{% trans "Mobile application for IOS and Android operating system" %}</li></td>
-              <td><li>{% trans "Creating desktop application for a hospital or medical institution" %}</li></td>
-            </tr>
-            </tbody>
-        </table>
-        </div>
-    </div>
-
-    <div class="w3-container w3-margin-bottom w3-left w3-padding-32">
-      <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/services"> {% trans "Back to services" %} &raquo;</a>
-    </div>
-</div>
-
-
-<div class="w3-container w3-light-grey w3-padding-large">
-  <div class="w3-row">
-     <div class="w3-left">
-        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/about">&#171; {% trans "About us" %} </a>
-    </div>
-     <div class="w3-right">
-      <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/contact"> {% trans "Contact" %} &raquo;</a>
+      <div class="w3-row w3-padding-32">
+        <a class="w3-button w3-black w3-padding-large w3-left w3-round-large" href="/{{ CURRENT_LANGUAGE }}/services"> {% trans "Back to services" %} &raquo;</a>
       </div>
   </div>
-</div>
+
+
+  <div class="w3-container w3-light-grey w3-padding-64">
+    <div class="w3-row">
+      <div class="w3-left">
+          <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/about">&#171; {% trans "About us" %} </a>
+      </div>
+      <div class="w3-right">
+        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/contact"> {% trans "Contact" %} &raquo;</a>
+        </div>
+    </div>
+  </div>
 
 {% endblock %}

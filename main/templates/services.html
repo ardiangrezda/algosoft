@@ -2,56 +2,55 @@
 {% load i18n %} 
 
 {% load static %}
+
 {% block content %}
-
-
-<!-- Services Section -->
-<div class="w3-container w3-center w3-white" style="padding:95px 8px" id="Div2">
-     <div class="w3-row-padding-16" >
-      <img class="w3-round  w3-animate-top" src="{% static 'images/services.jpg' %}" style="width:50%;">
-    </div>
-    <div class="w3-center-align w3-row w3-padding-32" style='color:rgb(0,102,153); '>
-        <div class="font_AG">
-                <strong>{% trans "CLICK FOR THE SERVICES THAT OUR ENGINNERS CAN OFFER" %}
-                </strong>
-        </div>
-    </div>
-    <div class="font_AG_small">
-      <div class="w3-row ">
-        <div class="w3-col l6 s6">
-          <div class="w3-container text-center w3-margin-bottom w3-mobile" >
-             <ul class="w3-ul w3-white w3-hover-shadow" >
-                    <li class="w3-red  w3-padding-48" style="height:150px;"> {% trans "SOFTWARE DEVELOPMENT" %}</li>
-                    <li class="w3-light-grey w3-padding-24 w3-mobile">
-                      <a class="w3-button w3-black w3-padding-large w3-center w3-round-large" href="/servicesoftware"> {% trans "Products" %} </a>
-                    </li>
-             </ul>
+  <!-- Services Section -->
+  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
+      <div class="w3-row-padding-16" >
+        <img class="w3-image" src="{% static 'images/services.jpg' %}" style="width:50%;">
+      </div>
+      <div class="w3-center-align w3-row w3-padding-32" style='color:rgb(0,102,153); '>
+          <div class="font_AG_large">
+                  <strong>{% trans "CLICK FOR THE SERVICES THAT OUR ENGINNERS CAN OFFER" %}
+                  </strong>
           </div>
-        </div>
-        <div class="w3-col l6 s6">
-          <div class="w3-container text-center w3-margin-bottom w3-mobile" >
-             <ul class="w3-ul w3-white w3-hover-shadow" >
-                    <li class="w3-red  w3-padding-48" style="height:150px;">{% trans "DATA SERVICES AND MACHINE LEARNING" %} </li>
-                    <li class="w3-light-grey w3-padding-24 w3-mobile">
-                        <a class="w3-button w3-black w3-padding-large w3-center w3-round-large" href="/servicedata"> {% trans "Products" %} </a>
+      </div>
+      <div class="font_AG_small">
+        <div class="w3-row ">
+          <div class="w3-col l6 s6">
+            <div class="w3-container text-center w3-margin-bottom w3-mobile" >
+              <ul class="w3-ul w3-white w3-hover-shadow" >
+                      <li class="w3-red  w3-padding-48" style="height:150px;"> {% trans "SOFTWARE DEVELOPMENT" %}</li>
+                      <li class="w3-light-grey w3-padding-24 w3-mobile">
+                        <a class="w3-button w3-black w3-padding-large w3-center w3-round-large" href="/{{ CURRENT_LANGUAGE }}/servicesoftware"> {% trans "Products" %} </a>
                       </li>
-             </ul>
+              </ul>
+            </div>
+          </div>
+          <div class="w3-col l6 s6">
+            <div class="w3-container text-center w3-margin-bottom w3-mobile" >
+              <ul class="w3-ul w3-white w3-hover-shadow" >
+                      <li class="w3-red  w3-padding-48" style="height:150px;">{% trans "DATA SERVICES AND MACHINE LEARNING" %} </li>
+                      <li class="w3-light-grey w3-padding-24 w3-mobile">
+                          <a class="w3-button w3-black w3-padding-large w3-center w3-round-large" href="/{{ CURRENT_LANGUAGE }}/servicedata"> {% trans "Products" %} </a>
+                        </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-</div>
+  </div>
 
-<div class="w3-container w3-light-grey w3-padding-large">
-  <div class="w3-row">
-     <div class="w3-left">
-      <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/about">&#171; {% trans "About us" %} </a>
-    </div>
-     <div class="w3-right">
-      <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/contact"> {% trans "Contact" %} &raquo;</a>
+  <div class="w3-container w3-light-grey w3-padding-large">
+    <div class="w3-row">
+      <div class="w3-left">
+        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/about">&#171; {% trans "About us" %} </a>
+      </div>
+      <div class="w3-right">
+        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/contact"> {% trans "Contact" %} &raquo;</a>
+      </div>
     </div>
   </div>
-</div>
 
 {% endblock %}

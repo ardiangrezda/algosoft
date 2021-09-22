@@ -1,31 +1,49 @@
 {% load i18n %} 
 {% load static %}
 
+<head>
+    <link rel="stylesheet" href="{% static "css/materialize.css" %}">
+</head>
 
-<div class="w3-top">
-    <div class="w3-bar w3-black w3-card"  id="myNavbar">
-        <!--
-        <div class="font_AG">
-            <strong>
-            <span class="w3-bar-item w3-padding-16">{% trans "CONTACT" %}</span>
-            </strong>
-        </div>  -->
-        <a href="/" ><img src="{% static 'images/logo-green-white.jpg' %}" class="w3-bar-item w3-hide-small w3-right " height="72" width="50"></a>
-
-        {% get_current_language as CURRENT_LANGUAGE %}
-        {% get_available_languages as AVAILABLE_LANGUAGES %}
-        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
-        <div class="languages">
-        <ul class="languages">
-            {% for language in languages %}
-            <li>
-                <a href="/{{ language.code }}/"
-                {% if language.code == CURRENT_LANGUAGE %} class="active"{% endif %}>
-                {{ language.name_local }}
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+<nav class="navbar" style='background-color:teal'>
+    <div class="container">
+        <div class="nav left">
+            <a href="/{{ CURRENT_LANGUAGE }}/" class="navbar-brand"  ><img src="{% static 'images/logo-green-white.jpg' %}"  
+                height="50" width="72" style="border:0px solid black; background-color: transparent;">
+            </a>
+            <div class="font_AG_large">&nbsp; &nbsp;  ALGOSOFT II </div>
+        
+        </div>
+        <div class="nav right">
+            <div class="font_AG_small">
+                <a href="/{{ CURRENT_LANGUAGE }}/" class="nav-link" style='color:black;'><span class="nav-link-span"><span class="u-nav">{% trans "Home" %}</span></span></a>
+                <a href="/{{ CURRENT_LANGUAGE }}/about" class="nav-link" style='color:black;'><span class="nav-link-span"><span class="u-nav">{% trans "About" %}</a>
+                <a href="/{{ CURRENT_LANGUAGE }}/services" class="nav-link" style='color:black;'><span class="nav-link-span"><span class="u-nav">{% trans "Services" %}</a>
+                <a href="/{{ CURRENT_LANGUAGE }}/contact" class="nav-link" style='color:black;'><span class="nav-link-span"><span class="u-nav">{% trans "Contact" %}</a>
+            </div>
+            <form action="{% url 'set_language' %} " class="navbar-form navbar-right"  method="post">
+                {% csrf_token %}
+                <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+                <ul class="nav navbar-nav navbar-left language menu">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                            <button type="submit"
+                                style="border:0px solid black; background-color: transparent;"
+                                    name="language"
+                                    value="{{ language.code }}"
+                                    class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                                {% if language.code == 'en' %}
+                                    <img src="{% static 'images/English.png' %}"  style="width:100%;" height="40" width="40">
+                                {% endif %}
+                                {% if language.code == 'de' %}
+                                    <img src="{% static 'images/Germany.png' %}" style="width:100%;" height="40" width="40">
+                                {% endif %}
+                            </button>
+                    {% endfor %}
+                </ul>
+            </form>
         </div>
     </div>
-</div>
+  </nav>

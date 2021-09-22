@@ -104,10 +104,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 from django.utils.translation import gettext_lazy as _
 
+
 LANGUAGES = (
     ('en', _('English')),
     ('de', _('German')),
 )
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -134,5 +136,8 @@ STATICFILES_DIRS = (
 )
 MEDIA_URL = '/media/'
 
+LOCALE_PATHS = [
+    BASE_DIR / 'locale/',
+]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

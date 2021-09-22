@@ -2,46 +2,43 @@
 {% load i18n %} 
 
 {% load static %}
+
 {% block content %}
+  <!-- Contact Section -->
+  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
+      <div class="w3-row w3-padding-16" >
+          <img class="w3-image" src="{% static 'images/contact.jpg' %}" style="width:50%">
+      </div>
 
+      <div class="w3-row w3-padding-16 w3-center-align" style="color:rgb(0,102,153); ">
+          <div class="font_AG_large">
+              <strong >{% trans "HEAD OFFICE" %}</strong>
+          </div>
+      </div>
 
-<!-- Contact Section -->
-<div class="w3-container w3-center w3-white" style="padding:95px 8px" id="Div2">
-     <div class="w3-row w3-padding-16" >
-        <img class="w3-image" src="{% static 'images/contact.jpg' %}" style="width:50%">
-     </div>
+      <div class="w3-row w3-padding-16 w3-center-align" style="color:black; ">
+          <div class="font_AG_large">
+            {% trans "ALGOSOFT II" %}
+            <br />
+            <i class="fa fa-map-marker" style="width:30px"></i>
+            {% trans "Rr. Ahmet Krasniqi C2, hyrja 10" %}<br>
+            {% trans "Prishtine" %} <br />
+            {% trans "Kosovo" %}<br />
+          </div>
+      </div>
 
-    <div class="w3-row w3-padding-16 w3-center-align" style="color:rgb(0,102,153); ">
-         <div class="font_AG_large">
-            <strong >{% trans "HEAD OFFICE" %}</strong>
-        </div>
-    </div>
+      <div class="w3-row w3-padding-16 w3-center-align" style="color:black; ">
+          <div class="font_AG_large">
+              <i class="fa fa-envelope" style="width:30px"> </i><a href="mailto:contact@algosoftii.com">   contact@algosoftii.com</a>
+          </div>
+      </div>
+  </div>
 
-    <div class="w3-row w3-padding-16 w3-center-align" style="color:black; ">
-        <div class="font_AG_large">
-          {% trans "ALGOSOFT" %}
-          <br />
-          <i class="fa fa-map-marker" style="width:30px"></i>
-          {% trans "Rr. Ahmet Krasniqi C2, hyrja 10" %}<br>
-          {% trans "Prishtine" %} <br />
-          {% trans "Kosovo" %}<br />
-        </div>
-    </div>
-
-    <div class="w3-row w3-padding-16 w3-center-align" style="color:black; ">
-        <div class="font_AG_large">
-            <i class="fa fa-envelope" style="width:30px"> </i><a href="mailto:contact@algosoft.com">   contact@algosoft.com</a>
-        </div>
-    </div>
-</div>
-
-<div class="w3-container w3-light-grey w3-padding-large">
-  <div class="w3-row">
-     <div class="w3-left">
-      <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/services">&#171; {% trans "Services" %} </a>
+  <div class="w3-container w3-light-grey w3-padding-large">
+    <div class="w3-row">
+      <div class="w3-left">
+        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="containers">&#171; {% trans "Services" %} </a>
+      </div>
     </div>
   </div>
-</div>
-
-
 {% endblock %}
