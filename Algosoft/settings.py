@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -19,8 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i%b4g(ol@f*d)n4!sdx8#4n_5w%9w#v2&e!@z0x6v+d#e^rpz8'
+SECRET_KEY = os.environ.get('SECRET_KEY')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,14 +81,15 @@ WSGI_APPLICATION = 'Algosoft.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'project_database',
-        'USER' : 'project_database_user',
-        'PASSWORD' : 'yourpassword',
-        'HOST' : '127.0.0.1',
-        'PORT' : '5432',
+        'NAME': 'd91u0tt2n9n35o',
+        'USER' : 'sfbbvgyorlziei',
+        'PASSWORD' : '497b25030e73647331ff8db5026d9f57dc3b8612d8315cf719a19449706b9ed0',
+        'HOST' : 'ec2-107-20-24-247.compute-1.amazonaws.com',
+        'PORT': 5432,
     }
 }
-
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
