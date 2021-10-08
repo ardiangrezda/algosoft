@@ -35,10 +35,10 @@
                                     value="{{ language.code }}"
                                     class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
                                 {% if language.code == 'en' %}
-                                    <img src="{% static 'images/English.png' %}"  style="width:100%;" height="40" width="40">
+                                    <img src="{% static 'images/English.png' %}"  height="40" width="40">
                                 {% endif %}
                                 {% if language.code == 'de' %}
-                                    <img src="{% static 'images/Germany.png' %}" style="width:100%;" height="40" width="40">
+                                    <img src="{% static 'images/Germany.png' %}" height="40" width="40">
                                 {% endif %}
                             </button>
                     {% endfor %}
