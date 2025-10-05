@@ -220,9 +220,11 @@ body {
                                 class="language-btn {% if language.code == LANGUAGE_CODE %}selected{% endif %}"
                                 title="{% if language.code == 'en' %}English{% else %}Deutsch{% endif %}">
                             {% if language.code == 'en' %}
-                                <img src="{{ STATIC_URL }}images/English.png?v=1" alt="English">
+                                <img src="/static/images/English.png?v=2" alt="English" onerror="this.onerror=null; this.innerHTML='🇬🇧'; this.style='width:24px;height:24px;display:flex;justify-content:center;align-items:center;font-size:18px;'">
+                                <span style="display:none;">🇬🇧</span>
                             {% else %}
-                                <img src="{{ STATIC_URL }}images/Germany.png?v=1" alt="Deutsch">
+                                <img src="/static/images/Germany.png?v=2" alt="Deutsch" onerror="this.onerror=null; this.innerHTML='🇩🇪'; this.style='width:24px;height:24px;display:flex;justify-content:center;align-items:center;font-size:18px;'">
+                                <span style="display:none;">🇩🇪</span>
                             {% endif %}
                         </button>
                     {% endfor %}

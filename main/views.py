@@ -22,6 +22,9 @@ def servicesoftware(request):
 def servicedata(request):
     return render(request = request, template_name='services data services.html')
 
+def debug_static(request):
+    return render(request=request, template_name='debug.html')
+
 def contact(request):
     if request.method == 'POST':
         print("=== CONTACT FORM SUBMITTED ===")

@@ -108,10 +108,14 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-)
+]
 MEDIA_URL = '/media/'
+
+# Ensure Whitenoise configuration is correct
+WHITENOISE_USE_FINDERS = False
+WHITENOISE_MANIFEST_STRICT = False
 
 LOCALE_PATHS = [
     BASE_DIR / 'locale/',

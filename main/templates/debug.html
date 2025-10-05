@@ -1,0 +1,45 @@
+{% extends 'header.html' %}
+{% load i18n %} 
+{% load static %}
+
+{% block content %}
+<div style="max-width: 1200px; margin: 40px auto; padding: 20px;">
+    <h1>Debug Static Files</h1>
+    
+    <h2>Testing Language Icons</h2>
+    
+    <h3>Static Tag Method:</h3>
+    <div>
+        <p>English Icon:</p>
+        <img src="{% static 'images/English.png' %}" alt="English">
+    </div>
+    <div>
+        <p>German Icon:</p>
+        <img src="{% static 'images/Germany.png' %}" alt="German">
+    </div>
+    
+    <h3>Direct URL Method:</h3>
+    <div>
+        <p>English Icon:</p>
+        <img src="/static/images/English.png" alt="English">
+    </div>
+    <div>
+        <p>German Icon:</p>
+        <img src="/static/images/Germany.png" alt="German">
+    </div>
+    
+    <h3>STATIC_URL Method:</h3>
+    <div>
+        <p>English Icon:</p>
+        <img src="{{ STATIC_URL }}images/English.png" alt="English">
+    </div>
+    <div>
+        <p>German Icon:</p>
+        <img src="{{ STATIC_URL }}images/Germany.png" alt="German">
+    </div>
+    
+    <h2>Static Files Information</h2>
+    <p>STATIC_URL: {{ STATIC_URL }}</p>
+    <p>MEDIA_URL: {{ MEDIA_URL }}</p>
+</div>
+{% endblock %}
