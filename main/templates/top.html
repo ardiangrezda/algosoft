@@ -120,6 +120,7 @@
     .navbar-container {
         padding: 0 15px;
         height: 60px;
+        flex-wrap: nowrap;
     }
     
     .nav-item {
@@ -128,6 +129,7 @@
     
     .nav-link {
         font-size: 14px;
+        white-space: nowrap;
     }
     
     .brand-text {
@@ -144,17 +146,27 @@
         height: 70px;
     }
     
+    .navbar-nav {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: visible;
+        width: auto;
+    }
+    
     .nav-item {
         margin-left: 10px;
+        white-space: nowrap;
     }
     
     .nav-link {
-        font-size: 13px;
+        font-size: 14px;
         padding: 4px 0;
+        white-space: nowrap;
     }
     
     .brand-text {
         font-size: 16px;
+        white-space: nowrap;
     }
     
     .language-switcher {

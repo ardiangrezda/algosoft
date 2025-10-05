@@ -5,6 +5,23 @@
 
 {% block content %}
 <style>
+/* Fix navbar display issues on this page */
+@media (max-width: 480px) {
+    .navbar-nav {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: visible !important;
+    }
+    
+    .nav-link {
+        white-space: nowrap !important;
+    }
+    
+    .nav-item {
+        white-space: nowrap !important;
+    }
+}
+
 .data-services-container {
     max-width: 1200px;
     margin: 0 auto;
