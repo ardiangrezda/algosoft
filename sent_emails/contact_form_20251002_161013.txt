@@ -1,0 +1,16 @@
+Subject: Contact Form: General Inquiry
+From: algosoftii.contact@gmail.com
+To: ardian.grezda@hotmail.com
+Date: 2025-10-02 16:10:13
+
+New contact form submission:
+
+Name: Ardi
+Email: anigrezda@hotmail.com
+Project Type: General Inquiry
+
+Message:
+test
+
+---
+Sent from Algosoft II contact form

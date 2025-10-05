@@ -1,0 +1,16 @@
+Subject: Contact Form: Software development
+From: algosoftii.contact@gmail.com
+To: ardian.grezda@hotmail.com
+Date: 2025-10-02 15:51:06
+
+New contact form submission:
+
+Name: Ardian grezda
+Email: anigrezda@hotmail.com
+Project Type: Software development
+
+Message:
+Project description 1.
+
+---
+Sent from Algosoft II contact form

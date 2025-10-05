@@ -4,53 +4,329 @@
 {% load static %}
 
 {% block content %}
-  <!-- Services Section -->
-  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
-      <div class="w3-row-padding-16" >
-        <img class="w3-image" src="{% static 'images/services.jpg' %}" style="width:50%;">
-      </div>
-      <div class="w3-center-align w3-row w3-padding-32" style='color:rgb(0,102,153); '>
-          <div class="font_AG_large">
-                  <strong>{% trans "CLICK FOR THE SERVICES THAT OUR ENGINNERS CAN OFFER" %}
-                  </strong>
-          </div>
-      </div>
-      <div class="font_AG_small">
-        <div class="w3-row ">
-          <div class="w3-col l6 s6">
-            <div class="w3-container text-center w3-margin-bottom w3-mobile" >
-              <ul class="w3-ul w3-white w3-hover-shadow" >
-                      <li class="w3-red  w3-padding-48" style="height:150px;"> {% trans "SOFTWARE DEVELOPMENT" %}</li>
-                      <li class="w3-light-grey w3-padding-24 w3-mobile">
-                        <a class="w3-button w3-black w3-padding-large w3-center w3-round-large" href="/{{ CURRENT_LANGUAGE }}/servicesoftware"> {% trans "Products" %} </a>
-                      </li>
-              </ul>
-            </div>
-          </div>
-          <div class="w3-col l6 s6">
-            <div class="w3-container text-center w3-margin-bottom w3-mobile" >
-              <ul class="w3-ul w3-white w3-hover-shadow" >
-                      <li class="w3-red  w3-padding-48" style="height:150px;">{% trans "DATA SERVICES AND MACHINE LEARNING" %} </li>
-                      <li class="w3-light-grey w3-padding-24 w3-mobile">
-                          <a class="w3-button w3-black w3-padding-large w3-center w3-round-large" href="/{{ CURRENT_LANGUAGE }}/servicedata"> {% trans "Products" %} </a>
-                        </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+<style>
+.services-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
 
-  </div>
+.hero-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
 
-  <div class="w3-container w3-light-grey w3-padding-large">
-    <div class="w3-row">
-      <div class="w3-left">
-        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/about">&#171; {% trans "About us" %} </a>
-      </div>
-      <div class="w3-right">
-        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/contact"> {% trans "Contact" %} &raquo;</a>
-      </div>
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #7f8c8d;
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    border: 1px solid #f0f0f0;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-header {
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.service-card-header.software {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.service-card-header.data {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-card-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.service-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.service-features li {
+    padding: 8px 0;
+    color: #555;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.service-button {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.service-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+}
+
+.service-button.data-btn {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.service-button.data-btn:hover {
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+.navigation-section {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: #34495e;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-btn:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.nav-btn.about {
+    background: #27ae60;
+}
+
+.nav-btn.about:hover {
+    background: #219a52;
+}
+
+.nav-btn.contact {
+    background: #e67e22;
+}
+
+.nav-btn.contact:hover {
+    background: #d35400;
+}
+
+@media (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .service-card {
+        margin: 0 10px;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
+</style>
+
+<div class="services-page-container">
+    <div class="hero-section">
+        <img src="{% static 'images/services.jpg' %}" alt="Our Services" class="hero-image">
+        <h1 class="hero-title">{% trans "Our Professional Services" %}</h1>
+        <p class="hero-subtitle">
+            {% trans "Discover the comprehensive range of engineering solutions we offer to help transform your business ideas into reality" %}
+        </p>
     </div>
-  </div>
+
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-card-header software">
+                <span class="service-icon">💻</span>
+                <h2 class="service-title">{% trans "SOFTWARE DEVELOPMENT" %}</h2>
+            </div>
+            <div class="service-card-body">
+                <p class="service-description">
+                    {% trans "Complete software engineering solutions from desktop applications to web platforms and mobile apps." %}
+                </p>
+                <ul class="service-features">
+                    <li>{% trans "Desktop Windows Applications (C#, VB.NET)" %}</li>
+                    <li>{% trans "Web Applications (ASP.NET, PHP, Python, Blazor, Angular, etc)" %}</li>
+                    <li>{% trans "Mobile Apps (iOS & Android)" %}</li>
+                    <li>{% trans "Custom Automation Scripts" %}</li>
+                </ul>
+                <a href="{% url 'servicesoftware' %}" class="service-button">
+                    {% trans "Explore Software Services →" %}
+                </a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-card-header data">
+                <span class="service-icon">📊</span>
+                <h2 class="service-title">{% trans "DATA SERVICES AND MACHINE LEARNING" %}</h2>
+            </div>
+            <div class="service-card-body">
+                <p class="service-description">
+                    {% trans "Advanced data analysis, visualization, and machine learning solutions to unlock insights from your data." %}
+                </p>
+                <ul class="service-features">
+                    <li>{% trans "Data Extraction & Processing (Python, numpy, Pandas)" %}</li>
+                    <li>{% trans "Data Visualization (Matplotlib, Seaborn)" %}</li>
+                    <li>{% trans "Machine Learning Models (Scikit-learn, Keras)" %}</li>
+                    <li>{% trans "Business Intelligence Solutions" %}</li>
+                </ul>
+                <a href="{% url 'servicedata' %}" class="service-button data-btn">
+                    {% trans "Explore Data Services →" %}
+                </a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-card-header" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);">
+                <span class="service-icon">🎓</span>
+                <h2 class="service-title">{% trans "ONLINE COURSES" %}</h2>
+            </div>
+            <div class="service-card-body">
+                <p class="service-description">
+                    {% trans "Learn directly from our experts through our comprehensive Udemy courses in Python programming and data analysis, created by our team members." %}
+                </p>
+                <ul class="service-features">
+                    <li>{% trans "Python Fundamentals and Basics of NumPy" %}</li>
+                    <li>{% trans "Data Analysis and Visualization with Pandas" %}</li>
+                    <li>{% trans "Practical Hands-on Exercises" %}</li>
+                    <li>{% trans "Real-world Examples and Use Cases" %}</li>
+                    <li>{% trans "Expert Instruction from Industry Professionals" %}</li>
+                </ul>
+                <a href="https://www.udemy.com/course/python-fundamentals-ag/" target="_blank" class="service-button" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); margin-bottom: 15px; width: 100%;">
+                    {% trans "Python Fundamentals Course →" %}
+                </a>
+                <a href="https://www.udemy.com/course/dav-using-python-ag/" target="_blank" class="service-button" style="background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); width: 100%;">
+                    {% trans "Data Analysis with Pandas →" %}
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation-section">
+        <h3 style="color: #2c3e50; margin-bottom: 30px; font-size: 24px;">{% trans "Ready to Get Started?" %}</h3>
+        <div class="nav-buttons">
+            <a href="{% url 'about' %}" class="nav-btn about">
+                {% trans "Learn About Us" %}
+            </a>
+            <a href="{% url 'contact' %}" class="nav-btn contact">
+                {% trans "Get In Touch" %}
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

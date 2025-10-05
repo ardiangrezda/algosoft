@@ -15,21 +15,25 @@ Including another URLconf
 """
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path, include
 from django.conf import settings
-
 from django.conf.urls.static import static
 from main import views
-
 from django.utils.translation import gettext_lazy as _
 
-urlpatterns = i18n_patterns(
-    path("", views.homepage),
-    path('admin/', admin.site.urls),
-    path('about/', views.about),
-    path('services/', views.services),
-    path('servicesoftware/', views.servicesoftware),
-    path('servicedata/', views.servicedata),
-    path('contact/', views.contact),
+# Non-translated URLs
+urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
- ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('admin/', admin.site.urls),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Translated URLs
+urlpatterns += i18n_patterns(
+    path('', views.homepage, name='home'),
+    path('about/', views.about, name='about'),
+    path('services/', views.services, name='services'),
+    path('servicesoftware/', views.servicesoftware, name='servicesoftware'),
+    path('servicedata/', views.servicedata, name='servicedata'),
+    path('contact/', views.contact, name='contact'),
+    prefix_default_language=True
+)

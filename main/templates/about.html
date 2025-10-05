@@ -4,49 +4,283 @@
 {% load static %}
 
 {% block content %}
-  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
-      <div class="w3-row-padding-16" >
-        <img class="w3-image" src="{% static 'images/about-us.jpg' %}" style="width:50%;">
-      </div>
+<style>
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
 
-      <div class="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153); '>
-          <div class="font_AG">
-            <strong>{% trans "WHO WE ARE - WHAT WE KNOW - WHAT WE CAN DO " %} </strong>
-              <p>
-                <div class="font_AG_small">
-                  <span style='color:black'>
-                    {% trans "We are a group of engineers with expertise in software engineering and development." %}
-                    <br />
-                    {% trans "Also, we have experience in maintaining databases, building Windows application from scratch, building web application and web services, creating small scripts for automation of different jobs. " %}
-                    </span>
-                </div>
-              </p>
-          </div>
-      </div>
+.about-hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
 
-      <div class ="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153); '>
-          <div class="font_AG">
-            <strong>{% trans "OUR PASSION" %}</strong>
-              <p>
-                <div class="font_AG_small">
-                <span style='color:black'>
-                    {% trans "We share our passion for software development with our engineers and with our customers." %}
-                </span>
-              </div>
-            </p>
-          </div>
-      </div>
-  </div>
+.about-image {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
 
-  <div class="w3-container w3-light-grey w3-padding-large">
-    <div class="w3-row">
-      <div class="w3-left">
-        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}">&#171; {% trans "Home" %} </a>
-      </div>
-      <div class="w3-right">
-          <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/services">{% trans "Services" %} &raquo;</a>
-      </div>
+.about-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.2;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.content-section {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+}
+
+.section-icon {
+    font-size: 48px;
+    margin-bottom: 25px;
+    display: block;
+    text-align: center;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-description {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.expertise-item {
+    background: #f8f9fa;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 4px solid #3498db;
+    transition: all 0.3s ease;
+}
+
+.expertise-item:hover {
+    background: #e3f2fd;
+    transform: translateY(-3px);
+}
+
+.expertise-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.expertise-title {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.expertise-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.team-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 80px -20px 0 -20px;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+.team-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.team-description {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.navigation-section {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: #34495e;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-btn:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.nav-btn.home {
+    background: #27ae60;
+}
+
+.nav-btn.home:hover {
+    background: #219a52;
+}
+
+.nav-btn.services {
+    background: #3498db;
+}
+
+.nav-btn.services:hover {
+    background: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-title {
+        font-size: 32px;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
+</style>
+
+<div class="about-container">
+    <div class="about-hero">
+        <img src="{% static 'images/about-us.jpg' %}" alt="About Algosoft II" class="about-image">
+        <h1 class="about-title">{% trans "ABOUT US" %}</h1>
     </div>
-  </div>
+
+    <div class="about-content">
+        <div class="content-section">
+            <span class="section-icon">👥</span>
+            <h2 class="section-title">{% trans "Our Expertise" %}</h2>
+            <p class="section-description">
+                {% trans "We are a team of engineers specialized in software engineering and development." %}
+                <br><br>
+                {% trans "We have experience developing Windows applications from scratch, creating modern web applications and services, as well as performing data analysis and visualization." %}
+            </p>
+        </div>
+
+        <div class="content-section">
+            <span class="section-icon">❤️</span>
+            <h2 class="section-title">{% trans "OUR PASSION" %}</h2>
+            <p class="section-description">
+                {% trans "We share our passion for software development with both our engineers and our customers." %}
+                <br><br>
+                {% trans "Our commitment to excellence drives us to deliver solutions that exceed expectations and create lasting partnerships with our clients." %}
+            </p>
+        </div>
+    </div>
+
+    <div class="expertise-grid">
+        <div class="expertise-item">
+            <span class="expertise-icon">💻</span>
+            <h3 class="expertise-title">{% trans "Software Development" %}</h3>
+            <p class="expertise-description">{% trans "Custom applications and solutions" %}</p>
+        </div>
+        <div class="expertise-item">
+            <span class="expertise-icon">🌐</span>
+            <h3 class="expertise-title">{% trans "Web Applications" %}</h3>
+            <p class="expertise-description">{% trans "Modern web solutions and services" %}</p>
+        </div>
+        <div class="expertise-item">
+            <span class="expertise-icon">📊</span>
+            <h3 class="expertise-title">{% trans "Data Analytics" %}</h3>
+            <p class="expertise-description">{% trans "Machine learning and insights" %}</p>
+        </div>
+    </div>
+
+    <div class="team-section">
+        <h2 class="team-title">{% trans "Engineering Excellence" %}</h2>
+        <p class="team-description">
+            {% trans "Our team combines technical expertise with creative problem-solving to deliver innovative software solutions. We pride ourselves on our ability to understand complex requirements and translate them into efficient, scalable applications." %}
+        </p>
+    </div>
+
+    <div class="navigation-section">
+        <h3 style="color: #2c3e50; margin-bottom: 30px; font-size: 24px;">{% trans "Explore More" %}</h3>
+        <div class="nav-buttons">
+            <a href="{% url 'home' %}" class="nav-btn home">
+                ← {% trans "Home" %}
+            </a>
+            <a href="{% url 'services' %}" class="nav-btn services">
+                {% trans "Services" %} →
+            </a>
+            <a href="{% url 'contact' %}" class="nav-btn">
+                {% trans "Contact Us" %} →
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

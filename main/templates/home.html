@@ -4,72 +4,264 @@
 {% load static %}
 
 {% block content %}
-    <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
-        <div class="w3-row">
-            <div class="col-xs-12">
-                <img class="w3-image" src="{% static 'images/home_01.jpg' %}" style="width:50%;">
-            </div>
+<style>
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-section {
+    padding: 80px 0 40px 0;
+    text-align: center;
+    background: transparent;
+    color: #2c3e50;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    margin-top: 0px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    /* Adjusted opacity for light background */
+    opacity: 1;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    /* Adjusted opacity for light background */
+    opacity: 1;
+}
+
+.features-section {
+    padding: 40px 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 60px;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.feature-title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.feature-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.highlight-text {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.cta-section {
+    background: transparent;
+    padding: 40px 0;
+    text-align: center;
+    margin: 40px 0 0 0; 
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cta-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 18px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(52, 152, 219, 0.4);
+}
+
+.cta-button.secondary {
+    background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+}
+
+.cta-button.secondary:hover {
+    box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 250px;
+        text-align: center;
+    }
+}
+</style>
+
+<div class="home-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <img src="{% static 'images/home_01.jpg' %}" alt="Algosoft II" class="hero-image">
+            <h1 class="hero-title">{% trans "SOFTWARE ENGINEERING SPECIALISTS" %}</h1>
+            <p class="hero-subtitle">
+                <strong>{% trans "Algosoft II" %}</strong>
+            </p>
+            <p class="hero-description">
+                {% trans "An independent engineering firm with highly qualified specialists in computer engineering and computer science." %}
+            </p>
         </div>
-        <div class="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153) '>
-            <div class="font_AG">
-                <strong> {% trans "SOFTWARE ENGINEERING SPECIALISTS" %}</strong>
-                <p>
-                    <div class="font_AG_small">
-                    <span style='color:black'>
-                    <strong>{% trans "Algosoft II" %}</strong>
-                    {% trans " is an independent engineering office with highly qualified engineers from the areas of electrical and computer engineering." %}
-                    </span>
-                    </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🚀</span>
+                <h3 class="feature-title">{% trans "PASSION FOR SOFTWARE DEVELOPMENT" %}</h3>
+                <p class="feature-description">
+                    {% trans "We support the software development of your products from specification and system design through to production launch and beyond." %}
                 </p>
             </div>
-        </div>
 
-        <div class ="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153); '>
-            <div class="font_AG">
-                    <strong>{% trans "PASSION FOR SOFTWARE-DEVELOPMENT" %}</strong>
-                <p>
-                    <div class="font_AG_small">
-                        <span style='color:black'> {% trans "On specification! On time! On cost!" %}
-                            <br />
-                            {% trans "We support software development of your products from the definition of the specification and system design of your product until the start of production and further." %}
-                            </span>
-                    </div>
+            <div class="feature-card">
+                <span class="feature-icon">🤝</span>
+                <h3 class="feature-title">{% trans "RELIABLE PARTNERSHIPS" %}</h3>
+                <p class="feature-description">
+                    {% trans "We can provide engineering professionals or university-trained students as external resources for direct integration into your ongoing projects, or work independently on specific components of your product. " %}
                 </p>
             </div>
-        </div>
 
-        <div class ="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153);'>
-            <div class="font_AG">
-                <strong>
-                    {% trans "RELIABLE PARTNERSHIPS" %}
-                </strong>
-                <p>
-                <div class="font_AG_small">
-                    <span style='color:black'>
-                        {% trans "We can offer engineering personnel or students from university engineering departments as outsource for direct integration on your running projects or work completely independent on the parts of your product. " %}
-                    </span>
-                </div>
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <h3 class="feature-title">{% trans "Professional Excellence" %}</h3>
+                <p class="feature-description">
+                    {% trans "Outsource your software projects—large or small—directly to us, and we will handle them with professionalism and care." %}
                 </p>
-            </div>
-        </div>
-
-        <div class ="w3-center-align w3-row w3-padding-16" style='color:rgb(0,102,153);'>
-            <div class="font_AG">
-                    <strong>
-                    {% trans "Outsource your software, small or big tasks, straight to us – we will take care for it in professional way! " %}
-                    <br />
-                    {% trans "Contact us - we will find a way to work together!" %}
-                    </strong>
             </div>
         </div>
     </div>
-        
-        
-    <div class="w3-container w3-light-grey w3-padding-large">
-        <div class="w3-row">
-        <div class="w3-right">
-            <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/about">{% trans "About us"%} &raquo;</a>
-        </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">{% trans "Contact us - we will find a way to work together!" %}</h2>
+            <p class="cta-description">
+                {% trans "Ready to transform your ideas into reality? Let's discuss how we can help bring your software projects to life." %}
+            </p>
+            <div class="cta-buttons">
+                <a href="{% url 'about' %}" class="cta-button secondary">
+                    {% trans "About us" %} →
+                </a>
+                <a href="{% url 'services' %}" class="cta-button">
+                    View Our Services →
+                </a>
+                <a href="{% url 'contact' %}" class="cta-button">
+                    Get In Touch →
+                </a>
+            </div>
         </div>
     </div>
+</div>
 {% endblock %}

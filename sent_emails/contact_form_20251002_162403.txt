@@ -1,0 +1,16 @@
+Subject: Contact Form: Database Solutions
+From: algosoftii.contact@gmail.com
+To: ardian.grezda@hotmail.com
+Date: 2025-10-02 16:24:03
+
+New contact form submission:
+
+Name: aaa
+Email: anigrezda@hotmail.com
+Project Type: Database Solutions
+
+Message:
+aaa
+
+---
+Sent from Algosoft II contact form

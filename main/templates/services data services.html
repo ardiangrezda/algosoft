@@ -4,73 +4,141 @@
 {% load static %}
 
 {% block content %}
-  <!-- Services data Section -->
-  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
-      <div class="w3-center-align w3-row w3-padding-32" style='color:rgb(0,102,153); '>
-          <div class="font_AG_large">
-            <strong> {% trans "DATA SERVICES AND MACHINE LEARNING" %} </strong>
-          </div>
-      </div>
+<style>
+.data-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
 
-      <div class="w3-responsive w3-card-4">
-          <div class="font_AG_small">
-              <table class="w3-table w3-striped w3-border">
-                  <thead>
-                  <tr class="w3-theme w3-red">
-                      <th>{% trans "DATA SERVICES" %}</th>
-                      <th>{% trans "DATA SERVICES: DIVERSE USER REQUIREMENTS AND APPLICATIONS" %}</th>
-                  </tr>
-                  </thead>
-              <tbody>
-              <tr>
-                <td><li>{% trans "Use of PYTHON as a tool for extracting data into pandas and other readable format." %}</li></td>
-                <td><li>{% trans "Making different graphs based on data acquired" %}</li></td> 
-              </tr>
-              <tr>
-                <td><li>{% trans "Data visualization using PYTHON libraries such as matplotlib, seaborn, bookeh, etc." %}</li></td>
-                <td><li>{% trans "Drawing GDP growth for different countries" %}</li></td>
-              </tr>
-              <tr>
-                <td><li>{% trans "Artificial Intelligence (AI) and Machine Learning using sklearn, keras and other PYTHON libraries" %}</li></td>
-                <td><li>{% trans "Making graphics/histogram for different parties during election" %}</li></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><li>{% trans "Prediction approving a loan for a customer" %}</li></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><li>{% trans "Predict median value of a house" %}</li></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><li>{% trans "Predict purchased amount for a customer" %}</li></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td><li>{% trans "Predict total sales for every product and store in the next month" %}</li></td>
-              </tr>
-              </tbody>
-          </table>
-          </div>
-      </div>
+.data-services-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
 
-      <div class="w3-container w3-padding-32">
-        <a class="w3-button w3-black w3-padding-large w3-left w3-round-large" href="/{{ CURRENT_LANGUAGE }}/services"> {% trans "Back to services" %} &raquo;</a>
-      </div>
+.data-services-title {
+    color: #2c3e50;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  </div>
+.data-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
 
-  <div class="w3-container w3-light-grey w3-padding-64">
-    <div class="w3-row">
-      <div class="w3-left">
-          <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/about">&#171; {% trans "About us" %} </a>
-      </div>
-      <div class="w3-right">
-        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/contact"> {% trans "Contact" %} &raquo;</a>
+.data-service-column {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.data-service-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.data-column-header {
+    color: #e74c3c;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #fdf2f2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.data-service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.data-service-item {
+    background: #f8f9fa;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.data-service-item:hover {
+    background: #ffebee;
+}
+
+.data-service-item::before {
+    content: "📊";
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .data-services-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .data-services-title {
+        font-size: 28px;
+    }
+    
+    .data-service-column {
+        padding: 20px;
+    }
+}
+</style>
+
+<div class="data-services-container">
+    <div class="data-services-header">
+        <h1 class="data-services-title">{% trans "DATA SERVICES" %}</h1>
+    </div>
+
+    <div class="data-services-grid">
+        <div class="data-service-column">
+            <h3 class="data-column-header">{% trans "DATA SERVICES: TOOLS AND EXPERTISE" %}</h3>
+            <h4 style="text-align: center; color: #2c3e50; margin: 0 0 15px 0; font-size: 18px; font-weight: 600;">{% trans "What We Do ...." %}</h4>
+            <ul class="data-service-list">
+                <li class="data-service-item">{% trans "Utilize Python for data extraction, transformation, and conversion into Pandas and other readable formats." %}</li>
+                <li class="data-service-item">{% trans "Perform data visualization using Python libraries such as Matplotlib, Seaborn, and Bokeh to present insights clearly and effectively." %}</li>
+                <li class="data-service-item">{% trans "Apply Artificial Intelligence (AI) and Machine Learning (ML) techniques using scikit-learn, Keras, and other Python frameworks for predictive analytics and intelligent automation." %}</li>
+            </ul>
+        </div>
+
+        <div class="data-service-column">
+            <h3 class="data-column-header">{% trans "DATA SERVICES: PROJECTS AND EXPERIENCE" %}</h3>
+            <h4 style="text-align: center; color: #2c3e50; margin: 0 0 15px 0; font-size: 18px; font-weight: 600;">{% trans "What We’ve Done...." %}</h4>
+            <ul class="data-service-list">
+                <li class="data-service-item">{% trans "Analyzed air pollution data across multiple cities using Pandas, identifying trends and patterns in environmental metrics." %}</li>
+                <li class="data-service-item">{% trans "Built predictive models to forecast total sales for each product and store for the upcoming month, utilizing NumPy, Pandas, and scikit-learn" %}</li>
+                <li class="data-service-item">{% trans "Created visual reports and histograms for election analysis, visualizing vote distributions and party performance." %}</li>
+            </ul>
         </div>
     </div>
-  </div>
+
+
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="{% url 'services' %}" class="btn-modern" style="margin: 0 10px;">
+            ← {% trans "Back to services" %}
+        </a>
+        <a href="{% url 'about' %}" class="btn-modern" style="margin: 0 10px; background: #2ecc71;">
+            {% trans "About us" %} →
+        </a>
+        <a href="{% url 'contact' %}" class="btn-modern" style="margin: 0 10px; background: #e74c3c;">
+            {% trans "Contact" %} →
+        </a>
+    </div>
+</div>
 
 {% endblock %}
 

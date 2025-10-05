@@ -4,41 +4,499 @@
 {% load static %}
 
 {% block content %}
-  <!-- Contact Section -->
-  <div class="container w3-center w3-white" style="padding:15px 15px" id="Div2">
-      <div class="w3-row w3-padding-16" >
-          <img class="w3-image" src="{% static 'images/contact.jpg' %}" style="width:50%">
-      </div>
+<style>
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
 
-      <div class="w3-row w3-padding-16 w3-center-align" style="color:rgb(0,102,153); ">
-          <div class="font_AG_large">
-              <strong >{% trans "HEAD OFFICE" %}</strong>
-          </div>
-      </div>
+.contact-hero {
+    text-align: center;
+    margin-bottom: 80px;
+}
 
-      <div class="w3-row w3-padding-16 w3-center-align" style="color:black; ">
-          <div class="font_AG_large">
-            {% trans "ALGOSOFT II" %}
-            <br />
-            <i class="fa fa-map-marker" style="width:30px"></i>
-            {% trans "Rr. Ahmet Krasniqi C2, hyrja 10" %}<br>
-            {% trans "Prishtine" %} <br />
-            {% trans "Kosovo" %}<br />
-          </div>
-      </div>
+.contact-image {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+}
 
-      <div class="w3-row w3-padding-16 w3-center-align" style="color:black; ">
-          <div class="font_AG_large">
-              <i class="fa fa-envelope" style="width:30px"> </i><a href="mailto:ardian.grezda@outlook.com">   ardian.grezda@outlook.com</a>
-          </div>
-      </div>
-  </div>
+.contact-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  <div class="w3-container w3-light-grey w3-padding-large">
-    <div class="w3-row">
-      <div class="w3-left">
-        <a class="w3-button w3-black w3-padding-large w3-right w3-round-large" href="/{{ CURRENT_LANGUAGE }}/services">&#171; {% trans "Services" %} </a>
-      </div>
+.contact-subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+.contact-info {
+    background: white;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.office-title {
+    color: #3498db;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+
+.company-name {
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    background: #e3f2fd;
+    transform: translateY(-2px);
+}
+
+.contact-icon {
+    background: #3498db;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.contact-text {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.contact-text a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-text a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.contact-form {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 50px 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.form-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-description {
+    text-align: center;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-sizing: border-box;
+}
+
+select.form-input {
+    background: white !important;
+    cursor: pointer !important;
+    appearance: auto !important;
+    -webkit-appearance: menulist !important;
+    -moz-appearance: menulist !important;
+    border: 1px solid #ccc !important;
+    color: #333 !important;
+    font-size: 16px !important;
+    padding: 15px !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 50px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+}
+
+select.form-input:focus {
+    background: white !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) !important;
+    border: 1px solid #667eea !important;
+}
+
+.form-input:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-button {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.messages {
+    margin-bottom: 20px;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    color: #27ae60;
+}
+
+.alert-error {
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.3);
+    color: #e74c3c;
+}
+
+.map-section {
+    margin-top: 80px;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 60px 40px;
+    border-radius: 20px;
+}
+
+.map-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.map-placeholder {
+    background: #ddd;
+    height: 300px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.navigation-section {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    background: #34495e;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-btn:hover {
+    background: #2c3e50;
+    transform: translateY(-2px);
+}
+
+.nav-btn.services {
+    background: #3498db;
+}
+
+.nav-btn.services:hover {
+    background: #2980b9;
+}
+
+.nav-btn.home {
+    background: #27ae60;
+}
+
+.nav-btn.home:hover {
+    background: #219a52;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-title {
+        font-size: 32px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .contact-text {
+        text-align: center;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-btn {
+        width: 200px;
+        text-align: center;
+    }
+}
+</style>
+
+<div class="contact-container">
+    <div class="contact-hero">
+        <img src="{% static 'images/contact.jpg' %}" alt="Contact Algosoft II" class="contact-image">
+        <h1 class="contact-title">{% trans "Get In Touch" %}</h1>
+        <p class="contact-subtitle">
+            {% trans "Ready to bring your software ideas to life? We'd love to hear about your project and discuss how we can help." %}
+        </p>
     </div>
-  </div>
+
+    <div class="contact-content">
+        <div class="contact-info">
+            <h2 class="office-title">{% trans "HEAD OFFICE" %}</h2>
+            <h3 class="company-name">{% trans "ALGOSOFT II" %}</h3>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="contact-text">
+                    {% trans "Ulpiane, Zija Shemsiu U3" %}<br>
+                    {% trans "Prishtine" %}<br>
+                    {% trans "Kosovo" %}
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="contact-text">
+                    <a href="mailto:ardian.grezda@hotmail.com">ardian.grezda@hotmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="contact-text">
+                    {% trans "Available for project consultations" %}<br>
+                    {% trans "Response within 24 hours" %}
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2 class="form-title">{% trans "Send Us a Message" %}</h2>
+            <p class="form-description">
+                {% trans "Tell us about your project requirements and we'll get back to you with a tailored solution." %}
+            </p>
+            
+            {% if messages %}
+                <div class="messages">
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            <form action="{% url 'contact' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label class="form-label" for="name">{% trans "Full Name" %}</label>
+                    <input type="text" id="name" name="name" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="email">{% trans "Email Address" %}</label>
+                    <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="subject">{% trans "Project Type" %}</label>
+                    <select id="subject" name="subject" class="form-input" required style="
+                        background: white !important;
+                        border: 2px solid #ccc !important;
+                        color: #333 !important;
+                        font-size: 14px !important;
+                        padding: 15px !important;
+                        width: 100% !important;
+                        height: 50px !important;
+                        display: block !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                        appearance: auto !important;
+                        -webkit-appearance: menulist !important;
+                        -moz-appearance: menulist !important;
+                        cursor: pointer !important;
+                    ">
+                        <option value="">{% trans "Select a service" %}</option>
+                        <option value="Software Development">{% trans "Software Development" %}</option>
+                        <option value="Data Services & ML">{% trans "Data Services & ML" %}</option>
+                        <option value="Web Development">{% trans "Web Development" %}</option>
+                        <option value="Mobile App Development">{% trans "Mobile App Development" %}</option>
+                        <option value="Other">{% trans "Other" %}</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="message">{% trans "Project Description" %}</label>
+                    <textarea id="message" name="message" class="form-input form-textarea" 
+                              placeholder="{% trans "Tell us about your project requirements, timeline, and goals..." %}" required></textarea>
+                </div>
+
+                <button type="submit" class="form-button">{% trans "Send Message" %}</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="map-section">
+        <h2 class="map-title">{% trans "Find Us" %}</h2>
+        <p style="color: #666; margin-bottom: 30px;">{% trans "Located in the heart of Prishtina, Kosovo" %}</p>
+        <div style="width: 100%; height: 400px; border-radius: 15px; overflow: hidden;">
+            <iframe 
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=42.6478491,21.1600449&zoom=17&maptype=roadmap" 
+                width="100%" 
+                height="400" 
+                style="border: 0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="navigation-section">
+        <h3 style="color: #2c3e50; margin-bottom: 30px; font-size: 24px;">{% trans "Explore Our Work" %}</h3>
+        <div class="nav-buttons">
+            <a href="{% url 'services' %}" class="nav-btn services">
+                ← {% trans "Services" %}
+            </a>
+            <a href="{% url 'home' %}" class="nav-btn home">
+                {% trans "Home" %}
+            </a>
+            <a href="{% url 'about' %}" class="nav-btn">
+                {% trans "Learn About Us" %}
+            </a>
+        </div>
+    </div>
+</div>
 {% endblock %}

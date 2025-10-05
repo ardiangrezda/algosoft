@@ -1,18 +1,17 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# English translations for Algosoft II
+# Copyright (C) 2021 Algosoft II
+# This file is distributed under the same license as the Algosoft package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: Algosoft II\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-22 09:36+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2021-09-22 09:36+0200\n"
+"Last-Translator: Algosoft Team\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,33 +26,73 @@ msgid "German"
 msgstr ""
 
 #: .\main\templates\about.html:14
-msgid "WHO WE ARE - WHAT WE KNOW - WHAT WE CAN DO "
+msgid "ABOUT US"
 msgstr ""
 
 #: .\main\templates\about.html:18
-msgid ""
-"We are a group of engineers with expertise in software engineering and "
-"development."
+msgid "We are a team of engineers specialized in software engineering and development."
 msgstr ""
 
 #: .\main\templates\about.html:20
-msgid ""
-"Also, we have experience in maintaining databases, building Windows "
-"application from scratch, building web application and web services, "
-"creating small scripts for automation of different jobs. "
-msgstr ""
+msgid "We have experience developing Windows applications from scratch, creating modern web applications and services, as well as performing data analysis and visualization."
 
 #: .\main\templates\about.html:29
 msgid "OUR PASSION"
 msgstr ""
 
 #: .\main\templates\about.html:33
-msgid ""
-"We share our passion for software development with our engineers and with "
-"our customers."
+msgid "We share our passion for software development with both our engineers and our customers."
 msgstr ""
 
-#: .\main\templates\about.html:44 .\main\templates\top.html:19
+#: .\main\templates\about.html:226
+msgid "Our Expertise"
+msgstr "Our Expertise"
+
+#: .\main\templates\about.html:240
+msgid "Our commitment to excellence drives us to deliver solutions that exceed expectations and create lasting partnerships with our clients."
+msgstr "Our commitment to excellence drives us to deliver solutions that exceed expectations and create lasting partnerships with our clients."
+
+#: .\main\templates\about.html:248
+msgid "Software Development"
+msgstr "Software Development"
+
+#: .\main\templates\about.html:249
+msgid "Custom applications and solutions"
+msgstr "Custom applications and solutions"
+
+#: .\main\templates\about.html:253
+msgid "Web Applications"
+msgstr "Web Applications"
+
+#: .\main\templates\about.html:254
+msgid "Modern web solutions and services"
+msgstr "Modern web solutions and services"
+
+#: .\main\templates\about.html:258
+msgid "Data Analytics"
+msgstr "Data Analytics"
+
+#: .\main\templates\about.html:259
+msgid "Machine learning and insights"
+msgstr "Machine learning and insights"
+
+#: .\main\templates\about.html:264
+msgid "Engineering Excellence"
+msgstr "Engineering Excellence"
+
+#: .\main\templates\about.html:266
+msgid "Our team combines technical expertise with creative problem-solving to deliver innovative software solutions. We pride ourselves on our ability to understand complex requirements and translate them into efficient, scalable applications."
+msgstr "Our team combines technical expertise with creative problem-solving to deliver innovative software solutions. We pride ourselves on our ability to understand complex requirements and translate them into efficient, scalable applications."
+
+#: .\main\templates\about.html:271
+msgid "Explore More"
+msgstr "Explore More"
+
+#: .\main\templates\about.html:280
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: .\main\templates\about.html:44 .\main\templates\top.html:19 .\main\templates\contact.html:485
 msgid "Home"
 msgstr ""
 
@@ -70,13 +109,89 @@ msgstr ""
 msgid "ALGOSOFT II"
 msgstr ""
 
-#: .\main\templates\contact.html:24
-msgid "Rr. Ahmet Krasniqi C2, hyrja 10"
+#: .\main\templates\contact.html:377
+msgid "Ulpiane, Zija Shemsiu U3"
 msgstr ""
 
 #: .\main\templates\contact.html:25
 msgid "Prishtine"
 msgstr ""
+
+#: .\main\templates\contact.html:363
+msgid "Ready to bring your software ideas to life? We'd love to hear about your project and discuss how we can help."
+msgstr "Ready to bring your software ideas to life? We'd love to hear about your project and discuss how we can help."
+
+#: .\main\templates\contact.html:397
+msgid "Available for project consultations"
+msgstr "Available for project consultations"
+
+#: .\main\templates\contact.html:398
+msgid "Response within 24 hours"
+msgstr "Response within 24 hours"
+
+#: .\main\templates\contact.html:404
+msgid "Send Us a Message"
+msgstr "Send Us a Message"
+
+#: .\main\templates\contact.html:406
+msgid "Tell us about your project requirements and we'll get back to you with a tailored solution."
+msgstr "Tell us about your project requirements and we'll get back to you with a tailored solution."
+
+#: .\main\templates\contact.html:422
+msgid "Full Name"
+msgstr "Full Name"
+
+#: .\main\templates\contact.html:427
+msgid "Email Address"
+msgstr "Email Address"
+
+#: .\main\templates\contact.html:432
+msgid "Project Type"
+msgstr "Project Type"
+
+#: .\main\templates\contact.html:449
+msgid "Select a service"
+msgstr "Select a service"
+
+#: .\main\templates\contact.html:451
+msgid "Data Services & ML"
+msgstr "Data Services & ML"
+
+#: .\main\templates\contact.html:452
+msgid "Web Development"
+msgstr "Web Development"
+
+#: .\main\templates\contact.html:453
+msgid "Mobile App Development"
+msgstr "Mobile App Development"
+
+#: .\main\templates\contact.html:454
+msgid "Other"
+msgstr "Other"
+
+#: .\main\templates\contact.html:459
+msgid "Project Description"
+msgstr "Project Description"
+
+#: .\main\templates\contact.html:461
+msgid "Tell us about your project requirements, timeline, and goals..."
+msgstr "Tell us about your project requirements, timeline, and goals..."
+
+#: .\main\templates\contact.html:464
+msgid "Send Message"
+msgstr "Send Message"
+
+#: .\main\templates\contact.html:470
+msgid "Find Us"
+msgstr "Find Us"
+
+#: .\main\templates\contact.html:471
+msgid "Located in the heart of Prishtina, Kosovo"
+msgstr "Located in the heart of Prishtina, Kosovo"
+
+#: .\main\templates\contact.html:479
+msgid "Explore Our Work"
+msgstr "Explore Our Work"
 
 #: .\main\templates\contact.html:26
 msgid "Kosovo"
@@ -97,18 +212,12 @@ msgid ""
 msgstr ""
 
 #: .\main\templates\home.html:29
-msgid "PASSION FOR SOFTWARE-DEVELOPMENT"
-msgstr ""
-
-#: .\main\templates\home.html:32
-msgid "On specification! On time! On cost!"
+msgid "PASSION FOR SOFTWAREDEVELOPMENT"
 msgstr ""
 
 #: .\main\templates\home.html:34
 msgid ""
-"We support software development of your products from the definition of the "
-"specification and system design of your product until the start of "
-"production and further."
+"We support the software development of your products from specification and system design through to production launch and beyond."
 msgstr ""
 
 #: .\main\templates\home.html:44
@@ -116,16 +225,15 @@ msgid "RELIABLE PARTNERSHIPS"
 msgstr ""
 
 #: .\main\templates\home.html:49
-msgid ""
-"We can offer engineering personnel or students from university engineering "
-"departments as outsource for direct integration on your running projects or "
-"work completely independent on the parts of your product. "
+msgid "We can provide engineering professionals or university-trained students as external resources for direct integration into your ongoing projects, or work independently on specific components of your product. "
+msgstr ""
+
+#: .\main\templates\home.html:247
+msgid "Professional Excellence"
 msgstr ""
 
 #: .\main\templates\home.html:59
-msgid ""
-"Outsource your software, small or big tasks, straight to us – we will take "
-"care for it in professional way! "
+msgid "Outsource your software projects—large or small—directly to us, and we will handle them with professionalism and care."
 msgstr ""
 
 #: .\main\templates\home.html:61
@@ -137,64 +245,46 @@ msgstr ""
 msgid "About us"
 msgstr ""
 
+#: .\main\templates\home.html:253
+msgid "Ready to transform your ideas into reality? Let's discuss how we can help bring your software projects to life."
+msgstr "Ready to transform your ideas into reality? Let's discuss how we can help bring your software projects to life."
+
 #: .\main\templates\services data services.html:11
 #: .\main\templates\services.html:33
 msgid "DATA SERVICES AND MACHINE LEARNING"
 msgstr ""
 
-#: .\main\templates\services data services.html:20
-msgid "DATA SERVICES"
-msgstr ""
+#: .\main\templates\services data services.html:154
+msgid "DATA SERVICES: TOOLS AND EXPERTISE"
+msgstr "DATA SERVICES: TOOLS AND EXPERTISE"
 
-#: .\main\templates\services data services.html:21
-msgid "DATA SERVICES: DIVERSE USER REQUIREMENTS AND APPLICATIONS"
-msgstr ""
+#: .\main\templates\services data services.html:164
+msgid "DATA SERVICES: PROJECTS AND EXPERIENCE"
+msgstr "DATA SERVICES: PROJECTS AND EXPERIENCE"
 
-#: .\main\templates\services data services.html:26
-msgid ""
-"Use of PYTHON as a tool for extracting data into pandas and other readable "
-"format."
-msgstr ""
+#: .\main\templates\services data services.html:157
+msgid "Utilize Python for data extraction, transformation, and conversion into Pandas and other readable formats."
+msgstr "Utilize Python for data extraction, transformation, and conversion into Pandas and other readable formats."
 
-#: .\main\templates\services data services.html:27
-msgid "Making different graphs based on data acquired"
-msgstr ""
+#: .\main\templates\services data services.html:167
+msgid "Analyzed air pollution data across multiple cities using Pandas, identifying trends and patterns in environmental metrics."
+msgstr "Analyzed air pollution data across multiple cities using Pandas, identifying trends and patterns in environmental metrics."
 
-#: .\main\templates\services data services.html:30
-msgid ""
-"Data visualization using PYTHON libraries such as matplotlib, seaborn, "
-"bookeh, etc."
-msgstr ""
+#: .\main\templates\services data services.html:158
+msgid "Perform data visualization using Python libraries such as Matplotlib, Seaborn, and Bokeh to present insights clearly and effectively."
+msgstr "Perform data visualization using Python libraries such as Matplotlib, Seaborn, and Bokeh to present insights clearly and effectively."
 
-#: .\main\templates\services data services.html:31
-msgid "Drawing GDP growth for different countries"
-msgstr ""
+#: .\main\templates\services data services.html:168
+msgid "Built predictive models to forecast total sales for each product and store for the upcoming month, utilizing NumPy, Pandas, and scikit-learn"
+msgstr "Built predictive models to forecast total sales for each product and store for the upcoming month, utilizing NumPy, Pandas, and scikit-learn"
 
-#: .\main\templates\services data services.html:34
-msgid ""
-"Artificial Intelligence (AI) and Machine Learning using sklearn, keras and "
-"other PYTHON libraries"
-msgstr ""
+#: .\main\templates\services data services.html:159
+msgid "Apply Artificial Intelligence (AI) and Machine Learning (ML) techniques using scikit-learn, Keras, and other Python frameworks for predictive analytics and intelligent automation."
+msgstr "Apply Artificial Intelligence (AI) and Machine Learning (ML) techniques using scikit-learn, Keras, and other Python frameworks for predictive analytics and intelligent automation."
 
-#: .\main\templates\services data services.html:35
-msgid "Making graphics/histogram for different parties during election"
-msgstr ""
-
-#: .\main\templates\services data services.html:39
-msgid "Prediction approving a loan for a customer"
-msgstr ""
-
-#: .\main\templates\services data services.html:43
-msgid "Predict median value of a house"
-msgstr ""
-
-#: .\main\templates\services data services.html:47
-msgid "Predict purchased amount for a customer"
-msgstr ""
-
-#: .\main\templates\services data services.html:51
-msgid "Predict total sales for every product and store in the next month"
-msgstr ""
+#: .\main\templates\services data services.html:169
+msgid "Created visual reports and histograms for election analysis, visualizing vote distributions and party performance."
+msgstr "Created visual reports and histograms for election analysis, visualizing vote distributions and party performance."
 
 #: .\main\templates\services data services.html:59 software.html:51
 msgid "Back to services"
@@ -205,62 +295,113 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: .\main\templates\services software.html:11 .\main\templates\services.html:23
+#: .\main\templates\services software.html:11 .\main\templates\services.html:254
 msgid "SOFTWARE DEVELOPMENT"
-msgstr ""
+msgstr "SOFTWARE DEVELOPMENT"
 
-#: .\main\templates\services software.html:20
-msgid "SOFTWARE DEVELOPMENT: TOOLS AND PROJECTS"
-msgstr ""
+#: .\main\templates\services.html:258
+msgid "Complete software engineering solutions from desktop applications to web platforms and mobile apps."
+msgstr "Complete software engineering solutions from desktop applications to web platforms and mobile apps."
 
-#: .\main\templates\services software.html:21
-msgid "SOFTWARE DEVELOPMENT: DIVERSE  USER REQUIREMENTS AND APPLICATIONS"
-msgstr ""
+#: .\main\templates\services.html:261
+msgid "Desktop Windows Applications (C#, VB.NET)"
+msgstr "Desktop Windows Applications (C#, VB.NET)"
 
-#: .\main\templates\services software.html:26
-msgid ""
-"Building desktop windows application using languages such as C#, VB.net, etc"
-msgstr ""
+#: .\main\templates\services.html:262
+msgid "Web Applications (ASP.NET, PHP, Python, Blazor, Angular, etc)"
+msgstr "Web Applications (ASP.NET, PHP, Python, Blazor, Angular, etc)"
 
-#: .\main\templates\services software.html:27
-msgid "Making a simple website as required by customer."
-msgstr ""
+#: .\main\templates\services.html:263
+msgid "Mobile Apps (iOS & Android)"
+msgstr "Mobile Apps (iOS & Android)"
 
-#: .\main\templates\services software.html:30
-msgid "Script building using python, perl, etc."
-msgstr ""
+#: .\main\templates\services.html:264
+msgid "Custom Automation Scripts"
+msgstr "Custom Automation Scripts"
 
-#: .\main\templates\services software.html:31
-msgid ""
-"Making website which includes database connection, administration and "
-"manipulation"
-msgstr ""
+#: .\main\templates\services.html:267
+msgid "Explore Software Services →"
+msgstr "Explore Software Services →"
 
-#: .\main\templates\services software.html:34
-msgid ""
-"Design databases, writing queries, query optimization, database "
-"administration using Oracle 10g, MS-SQL, mysql, etc."
-msgstr ""
+#: .\main\templates\services.html:279
+msgid "Advanced data analysis, visualization, and machine learning solutions to unlock insights from your data."
+msgstr "Advanced data analysis, visualization, and machine learning solutions to unlock insights from your data."
 
-#: .\main\templates\services software.html:35
-msgid "Creating a desktop application as required by customer"
-msgstr ""
+#: .\main\templates\services.html:282
+msgid "Data Extraction & Processing (Python, numpy, Pandas)"
+msgstr "Data Extraction & Processing (Python, numpy, Pandas)"
 
-#: .\main\templates\services software.html:38
-msgid "Building web application using asp.net, php, python, etc"
-msgstr ""
+#: .\main\templates\services.html:283
+msgid "Data Visualization (Matplotlib, Seaborn)"
+msgstr "Data Visualization (Matplotlib, Seaborn)"
 
-#: .\main\templates\services software.html:39
-msgid "Creating desktop application for a university"
-msgstr ""
+#: .\main\templates\services.html:284
+msgid "Machine Learning Models (Scikit-learn, Keras)"
+msgstr "Machine Learning Models (Scikit-learn, Keras)"
 
-#: .\main\templates\services software.html:42
-msgid "Mobile application for IOS and Android operating system"
-msgstr ""
+#: .\main\templates\services.html:285
+msgid "Business Intelligence Solutions"
+msgstr "Business Intelligence Solutions"
 
-#: .\main\templates\services software.html:43
-msgid "Creating desktop application for a hospital or medical institution"
-msgstr ""
+#: .\main\templates\services.html:288
+msgid "Explore Data Services →"
+msgstr "Explore Data Services →"
+
+#: .\main\templates\services software.html:111
+msgid "SOFTWARE DEVELOPMENT: TOOLS AND EXPERTISE"
+msgstr "SOFTWARE DEVELOPMENT: TOOLS AND EXPERTISE"
+
+#: .\main\templates\services software.html:122
+msgid "SOFTWARE DEVELOPMENT: PROJECTS AND EXPERIENCE"
+msgstr "SOFTWARE DEVELOPMENT: PROJECTS AND EXPERIENCE"
+
+#: .\main\templates\services software.html:113
+msgid "Develop Windows desktop applications using C#, VB.NET, .NET Core, Python."
+msgstr "Develop Windows desktop applications using C#, VB.NET, .NET Core, Python."
+
+#: .\main\templates\services software.html:124
+msgid "Processed and transformed complex CDR (Call Detail Record) data into readable formats for a major national telecom company, using C++ tools compatible with Alcatel systems (MSC, SMSC, IN, ICC, MMS, etc.)."
+msgstr "Processed and transformed complex CDR (Call Detail Record) data into readable formats for a major national telecom company, using C++ tools compatible with Alcatel systems (MSC, SMSC, IN, ICC, MMS, etc.)."
+
+#: .\main\templates\services software.html:114
+msgid "Build C++ applications for both Linux and Windows environments."
+msgstr "Build C++ applications for both Linux and Windows environments."
+
+#: .\main\templates\services software.html:115
+msgid "Automate workflows and data processing through Python and Perl scripting."
+msgstr "Automate workflows and data processing through Python and Perl scripting."
+
+#: .\main\templates\services software.html:125
+msgid "Developed video processing software for handling requests from video recorders, using C++ and C#."
+msgstr "Developed video processing software for handling requests from video recorders, using C++ and C#."
+
+#: .\main\templates\services software.html:116
+msgid "Develop web applications using ASP.NET, Django, PHP, Python, .NET Core, Blazor, and AngularJS."
+msgstr "Develop web applications using ASP.NET, Django, PHP, Python, .NET Core, Blazor, and AngularJS."
+
+#: .\main\templates\services software.html:126
+msgid "Created a full accounting and invoicing web application using .NET and Blazor."
+msgstr "Created a full accounting and invoicing web application using .NET and Blazor."
+
+#: .\main\templates\services software.html:117
+msgid "Design and manage databases — from schema design and query optimization to full administration — using Oracle 10g, MS SQL Server, and MySQL."
+msgstr "Design and manage databases — from schema design and query optimization to full administration — using Oracle 10g, MS SQL Server, and MySQL."
+
+#: .\main\templates\services software.html:128
+msgid "Built a university management web application using classic ASP.NET."
+msgstr "Built a university management web application using classic ASP.NET."
+
+#: .\main\templates\services software.html:129
+msgid "Developed a desktop application for hospitals and medical institutions using C# WinForms."
+msgstr "Developed a desktop application for hospitals and medical institutions using C# WinForms."
+
+#: .\main\templates\services software.html:112
+msgid "What We Do ...."
+msgstr "What We Do ...."
+
+#: .\main\templates\services software.html:124
+msgid "What We’ve Done...."
+msgstr "What We’ve Done...."
 
 #: .\main\templates\services.html:14
 msgid "CLICK FOR THE SERVICES THAT OUR ENGINNERS CAN OFFER"
@@ -269,6 +410,62 @@ msgstr ""
 #: .\main\templates\services.html:25 .\main\templates\services.html:35
 msgid "Products"
 msgstr ""
+
+#: .\main\templates\services.html:237
+msgid "Our Professional Services"
+msgstr "Our Professional Services"
+
+#: .\main\templates\services.html:239
+msgid "Discover the comprehensive range of engineering solutions we offer to help transform your business ideas into reality"
+msgstr "Discover the comprehensive range of engineering solutions we offer to help transform your business ideas into reality"
+
+#: .\main\templates\services.html:289
+msgid "ONLINE COURSES"
+msgstr "ONLINE COURSES"
+
+#: .\main\templates\services.html:300
+msgid "Learn directly from our experts through our comprehensive Udemy courses in Python programming and data analysis, created by our team members."
+msgstr "Learn directly from our experts through our comprehensive Udemy courses in Python programming and data analysis, created by our team members."
+
+#: .\main\templates\services.html:303
+msgid "Python Fundamentals and Basics of NumPy"
+msgstr "Python Fundamentals and Basics of NumPy"
+
+#: .\main\templates\services.html:304
+msgid "Data Analysis and Visualization with Pandas"
+msgstr "Data Analysis and Visualization with Pandas"
+
+#: .\main\templates\services.html:305
+msgid "Practical Hands-on Exercises"
+msgstr "Practical Hands-on Exercises"
+
+#: .\main\templates\services.html:306
+msgid "Real-world Examples and Use Cases"
+msgstr "Real-world Examples and Use Cases"
+
+#: .\main\templates\services.html:307
+msgid "Expert Instruction from Industry Professionals"
+msgstr "Expert Instruction from Industry Professionals"
+
+#: .\main\templates\services.html:310
+msgid "Python Fundamentals Course →"
+msgstr "Python Fundamentals Course →"
+
+#: .\main\templates\services.html:313
+msgid "Data Analysis with Pandas →"
+msgstr "Data Analysis with Pandas →"
+
+#: .\main\templates\services.html:320
+msgid "Ready to Get Started?"
+msgstr "Ready to Get Started?"
+
+#: .\main\templates\services.html:323
+msgid "Learn About Us"
+msgstr "Learn About Us"
+
+#: .\main\templates\services.html:326
+msgid "Get In Touch"
+msgstr "Get In Touch"
 
 #: .\main\templates\top.html:20
 msgid "About"

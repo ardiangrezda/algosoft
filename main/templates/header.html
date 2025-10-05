@@ -9,10 +9,108 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body, html {
     height: 100%;
-    line-height: 1.5;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modern content styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.w3-center {
+    text-align: center;
+}
+
+.w3-row {
+    margin: 30px 0;
+}
+
+.w3-padding-16 {
+    padding: 20px 0;
+}
+
+.w3-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Modern section styling */
+.section-header {
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-content {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.highlight-text {
+    color: #3498db;
+    font-weight: 600;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Button styling */
+.btn-modern {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-modern:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Content spacing */
+.content-section {
+    padding: 60px 0;
+}
+
+.content-section:nth-child(even) {
+    background-color: #f8f9fa;
 }
 .w3-bar .w3-button {
     padding: 16px;
@@ -21,17 +119,23 @@ body, html {
 
 @media (min-width: 1281px) {
   div.font_AG_small {
-    font-size: 23px;
-    font-family:Constantia;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   div.font_AG {
-    font-size: 25px;
-    font-family:Constantia;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
   }
   div.font_AG_large {
-    font-size: 27px;
-    font-family:Constantia;
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
   }
 }
 
@@ -42,17 +146,23 @@ body, html {
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   div.font_AG_small {
-    font-size: 21px;
-    font-family:Constantia;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   div.font_AG {
-    font-size: 23px;
-    font-family:Constantia;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
   }
   div.font_AG_large {
-    font-size: 25px;
-    font-family:Constantia;
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
   }
 }
 
@@ -63,17 +173,23 @@ body, html {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   div.font_AG_small {
-    font-size: 19px;
-    font-family:Constantia;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   div.font_AG {
-    font-size: 21px;
-    font-family:Constantia;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
   }
   div.font_AG_large {
-    font-size: 23px;
-    font-family:Constantia;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
   }
 }
 
@@ -84,19 +200,24 @@ body, html {
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   div.font_AG_small {
-    font-size: 17px;
-    font-family:Constantia;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   div.font_AG {
-    font-size: 19px;
-    font-family:Constantia;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
   }
   div.font_AG_large {
-    font-size: 21px;
-    font-family:Constantia;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
   }
-  
 }
 
 /* 
@@ -106,17 +227,23 @@ body, html {
 
 @media (min-width: 481px) and (max-width: 767px) {
   div.font_AG_small {
-    font-size: 15px;
-    font-family:Constantia;
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   div.font_AG {
-    font-size: 17px;
-    font-family:Constantia;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
   }
   div.font_AG_large {
-    font-size: 19px;
-    font-family:Constantia;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
   }
 }
 
@@ -128,16 +255,22 @@ body, html {
 @media (min-width: 320px) and (max-width: 480px) {
     div.font_AG_small {
     font-size: 13px;
-    font-family:Constantia;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 
   div.font_AG {
     font-size: 15px;
-    font-family:Constantia;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
   }
   div.font_AG_large {
     font-size: 17px;
-    font-family:Constantia;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
   }
 }
 
@@ -162,9 +295,11 @@ body, html {
 </body>
 
 <!-- Footer -->
-<footer class="w3-center w3-light-grey w3-padding-32">
-  <div class="font_AG_small"> 
-        &#9400;<span style='color:rgb(0,102,153)'>algosoftii.com. All rights reserved. 
+<footer style="background-color: #f8f9fa; padding: 40px 0; margin-top: 60px; border-top: 1px solid #e9ecef;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 20px;">
+    <div style="font-size: 14px; color: #6c757d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> 
+      © 2025 <span style="color: #3498db; font-weight: 500;">algosoftii.com</span>. All rights reserved.
+    </div>
   </div>
 </footer>
 
