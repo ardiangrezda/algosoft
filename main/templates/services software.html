@@ -139,6 +139,34 @@
         font-size: 16px;
     }
 }
+
+/* Additional styling for very small screens */
+@media (max-width: 360px) {
+    .data-services-title {
+        font-size: 20px;
+    }
+    
+    .data-column-header {
+        font-size: 16px;
+        padding-bottom: 8px;
+        margin-bottom: 10px;
+    }
+    
+    .data-service-item {
+        font-size: 13px;
+        padding: 10px 8px;
+        margin-bottom: 8px;
+    }
+    
+    .data-services-container {
+        padding: 20px 8px;
+    }
+    
+    .data-service-item::before {
+        font-size: 14px;
+        margin-right: 6px;
+    }
+}
 </style>
 
 <div class="data-services-container">
