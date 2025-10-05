@@ -5,18 +5,18 @@
 
 {% block content %}
 <style>
-.services-container {
+.data-services-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-.services-header {
+.data-services-header {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.services-title {
+.data-services-title {
     color: #2c3e50;
     font-size: 36px;
     font-weight: 700;
@@ -24,14 +24,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.services-grid {
+.data-services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-top: 40px;
 }
 
-.service-column {
+.data-service-column {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -39,13 +39,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-column:hover {
+.data-service-column:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
-.column-header {
-    color: #3498db;
+.data-column-header {
+    color: #3498db;  /* Blue color for software services */
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 25px;
@@ -55,111 +55,109 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.service-list {
+.data-service-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.service-item {
+.data-service-item {
     background: #f8f9fa;
     margin-bottom: 15px;
     padding: 20px;
     border-radius: 8px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #3498db;  /* Blue color for software services */
     transition: background-color 0.3s ease;
     font-size: 16px;
     line-height: 1.6;
     color: #555;
 }
 
-.service-item:hover {
-    background: #e3f2fd;
+.data-service-item:hover {
+    background: #e3f2fd;  /* Light blue background for software services */
 }
 
-.service-item::before {
-    content: "✓";
-    color: #3498db;
-    font-weight: bold;
+.data-service-item::before {
+    content: "💻";  /* Computer emoji for software services */
     margin-right: 10px;
     font-size: 18px;
 }
 
 @media (max-width: 768px) {
-    .services-grid {
+    .data-services-grid {
         grid-template-columns: 1fr;
         gap: 30px;
     }
     
-    .services-title {
+    .data-services-title {
         font-size: 28px;
     }
     
-    .service-column {
+    .data-service-column {
         padding: 25px;
     }
     
-    .services-container {
+    .data-services-container {
         padding: 40px 15px;
     }
 }
 
 @media (max-width: 480px) {
-    .services-title {
+    .data-services-title {
         font-size: 26px;
         margin-bottom: 15px;
         word-wrap: break-word;
     }
     
-    .column-header {
+    .data-column-header {
         font-size: 20px;
         word-wrap: break-word;
     }
     
-    .service-item {
+    .data-service-item {
         font-size: 15px;
         margin-bottom: 12px;
         padding: 10px;
     }
     
-    .service-list {
+    .data-service-list {
         padding-left: 0;
     }
     
-    .service-column {
+    .data-service-column {
         padding: 20px 15px;
     }
 }
 </style>
 
-<div class="services-container">
-    <div class="services-header">
-        <h1 class="services-title">{% trans "SOFTWARE DEVELOPMENT" %}</h1>
+<div class="data-services-container">
+    <div class="data-services-header">
+        <h1 class="data-services-title">{% trans "SOFTWARE DEVELOPMENT" %}</h1>
     </div>
 
-    <div class="services-grid">
-        <div class="service-column">
-            <h3 class="column-header">{% trans "SOFTWARE DEVELOPMENT: TOOLS AND EXPERTISE" %}</h3>
+    <div class="data-services-grid">
+        <div class="data-service-column">
+            <h3 class="data-column-header">{% trans "SOFTWARE DEVELOPMENT: TOOLS AND EXPERTISE" %}</h3>
             <h4 style="text-align: center; color: #2c3e50; margin: 0 0 15px 0; font-size: 18px; font-weight: 600;">{% trans "What We Do ...." %}</h4>
-            <ul class="service-list">
-                <li class="service-item">{% trans "Develop Windows desktop applications using C#, VB.NET, .NET Core, Python." %}</li>
-                <li class="service-item">{% trans "Build C++ applications for both Linux and Windows environments." %}</li>
-                <li class="service-item">{% trans "Automate workflows and data processing through Python and Perl scripting." %}</li>
-                <li class="service-item">{% trans "Develop web applications using ASP.NET, Django, PHP, Python, .NET Core, Blazor, and AngularJS." %}</li>
-                <li class="service-item">{% trans "Design and manage databases — from schema design and query optimization to full administration — using Oracle 10g, MS SQL Server, and MySQL." %}</li>
+            <ul class="data-service-list">
+                <li class="data-service-item">{% trans "Develop Windows desktop applications using C#, VB.NET, .NET Core, Python." %}</li>
+                <li class="data-service-item">{% trans "Build C++ applications for both Linux and Windows environments." %}</li>
+                <li class="data-service-item">{% trans "Automate workflows and data processing through Python and Perl scripting." %}</li>
+                <li class="data-service-item">{% trans "Develop web applications using ASP.NET, Django, PHP, Python, .NET Core, Blazor, and AngularJS." %}</li>
+                <li class="data-service-item">{% trans "Design and manage databases — from schema design and query optimization to full administration — using Oracle 10g, MS SQL Server, and MySQL." %}</li>
             </ul>
         </div>
 
-        <div class="service-column">
-            <h3 class="column-header">{% trans "SOFTWARE DEVELOPMENT: PROJECTS AND EXPERIENCE" %}</h3>
-            <h4 style="text-align: center; color: #2c3e50; margin: 0 0 15px 0; font-size: 18px; font-weight: 600;">{% trans "What We’ve Done...." %}</h4>
-            <ul class="service-list">
-                <li class="service-item">{% trans "Processed and transformed complex CDR (Call Detail Record) data into readable formats for a major national telecom company, using C++ tools compatible with Alcatel systems (MSC, SMSC, IN, ICC, MMS, etc.)." %}</li>
-                <li class="service-item">{% trans "Developed video processing software for handling requests from video recorders, using C++ and C#." %}</li>
-                <li class="service-item">{% trans "Created a full accounting and invoicing web application using .NET and Blazor." %}                <a href="https://github.com/ardiangrezda/GrezdaAccountingAR" target="_blank" rel="noopener noreferrer">https://github.com/ardiangrezda/GrezdaAccountingAR</a>
+        <div class="data-service-column">
+            <h3 class="data-column-header">{% trans "SOFTWARE DEVELOPMENT: PROJECTS AND EXPERIENCE" %}</h3>
+            <h4 style="text-align: center; color: #2c3e50; margin: 0 0 15px 0; font-size: 18px; font-weight: 600;">{% trans "What We've Done...." %}</h4>
+            <ul class="data-service-list">
+                <li class="data-service-item">{% trans "Processed and transformed complex CDR (Call Detail Record) data into readable formats for a major national telecom company, using C++ tools compatible with Alcatel systems (MSC, SMSC, IN, ICC, MMS, etc.)." %}</li>
+                <li class="data-service-item">{% trans "Developed video processing software for handling requests from video recorders, using C++ and C#." %}</li>
+                <li class="data-service-item">{% trans "Created a full accounting and invoicing web application using .NET and Blazor." %}                <a href="https://github.com/ardiangrezda/GrezdaAccountingAR" target="_blank" rel="noopener noreferrer">https://github.com/ardiangrezda/GrezdaAccountingAR</a>
 </li>
-                <li class="service-item">{% trans "Built a university management web application using classic ASP.NET." %}</li>
-                <li class="service-item">{% trans "Developed a desktop application for hospitals and medical institutions using C# WinForms." %}</li>
+                <li class="data-service-item">{% trans "Built a university management web application using classic ASP.NET." %}</li>
+                <li class="data-service-item">{% trans "Developed a desktop application for hospitals and medical institutions using C# WinForms." %}</li>
             </ul>
         </div>
     </div>
