@@ -35,6 +35,5 @@ urlpatterns += i18n_patterns(
     path('servicesoftware/', views.servicesoftware, name='servicesoftware'),
     path('servicedata/', views.servicedata, name='servicedata'),
     path('contact/', views.contact, name='contact'),
-    path('debug-static/', views.debug_static, name='debug_static'),
     prefix_default_language=True
 )
