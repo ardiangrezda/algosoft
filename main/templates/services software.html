@@ -86,45 +86,62 @@
 @media (max-width: 768px) {
     .data-services-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
     }
     
     .data-services-title {
-        font-size: 28px;
+        font-size: 26px;
+        margin-bottom: 20px;
     }
     
     .data-service-column {
-        padding: 25px;
+        padding: 20px;
+        margin-bottom: 15px;
     }
     
     .data-services-container {
-        padding: 40px 15px;
+        padding: 30px 15px;
+        margin-top: 30px;
+    }
+    
+    .data-column-header {
+        font-size: 20px;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+    
+    .data-service-item {
+        padding: 15px;
+        margin-bottom: 12px;
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
     .data-services-title {
-        font-size: 24px;
+        font-size: 22px;
         margin-bottom: 15px;
         word-wrap: break-word;
+        padding: 0 5px;
     }
     
     .data-column-header {
         font-size: 18px;
         word-wrap: break-word;
         padding-bottom: 10px;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
     
     .data-service-item {
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 10px;
-        padding: 12px;
-        line-height: 1.4;
+        padding: 12px 10px;
+        line-height: 1.5;
     }
     
     .data-service-list {
         padding-left: 0;
+        margin: 0;
     }
     
     .data-service-column {
@@ -132,39 +149,45 @@
     }
     
     .data-services-container {
-        padding: 30px 10px;
+        padding: 20px 10px;
     }
     
     .data-service-item::before {
         font-size: 16px;
+        margin-right: 6px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    /* Force wrapping for long text like URLs */
+    a {
+        word-break: break-all;
+        display: inline-block;
     }
 }
 
-/* Additional styling for very small screens */
-@media (max-width: 360px) {
+/* Samsung Galaxy A54 and similar modern phones specific styling */
+@media (max-width: 412px) {
+    .data-services-container {
+        padding: 20px 8px;
+        margin-top: 20px;
+    }
+    
     .data-services-title {
         font-size: 20px;
+        margin-bottom: 10px;
     }
     
     .data-column-header {
-        font-size: 16px;
-        padding-bottom: 8px;
+        font-size: 17px;
         margin-bottom: 10px;
     }
     
     .data-service-item {
-        font-size: 13px;
+        font-size: 14px;
         padding: 10px 8px;
         margin-bottom: 8px;
-    }
-    
-    .data-services-container {
-        padding: 20px 8px;
-    }
-    
-    .data-service-item::before {
-        font-size: 14px;
-        margin-right: 6px;
+        border-left-width: 3px;
     }
 }
 </style>

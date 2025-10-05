@@ -208,9 +208,9 @@ body {
                                 class="language-btn {% if language.code == LANGUAGE_CODE %}selected{% endif %}"
                                 title="{% if language.code == 'en' %}English{% else %}Deutsch{% endif %}">
                             {% if language.code == 'en' %}
-                                <img src="{{ STATIC_URL }}images/English.png" alt="English">
+                                <img src="{{ STATIC_URL }}images/English.png?v=1" alt="English">
                             {% else %}
-                                <img src="{{ STATIC_URL }}images/Germany.png" alt="Deutsch">
+                                <img src="{{ STATIC_URL }}images/Germany.png?v=1" alt="Deutsch">
                             {% endif %}
                         </button>
                     {% endfor %}
