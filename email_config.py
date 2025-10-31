@@ -45,7 +45,7 @@ EMAIL_SETTINGS_OUTLOOK = {
 # 3. Go to "App passwords" and generate a new app password
 # 4. Use that 16-character password in EMAIL_HOST_PASSWORD
 # 5. Update EMAIL_HOST_USER with your Gmail address
-# 6. The emails will be sent to: ardian.grezda@hotmail.com
+# 6. The emails will be sent to: ardian_grezda@outlook.com
 
 print("Email configuration instructions loaded.")
 print("Check this file for setup instructions.")

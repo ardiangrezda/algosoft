@@ -119,7 +119,7 @@ Date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
                         safe_subject,
                         safe_message,
                         'algosoftii.contact@gmail.com',
-                        ['ardian.grezda@hotmail.com'],
+                        ['ardian_grezda@outlook.com'],
                         fail_silently=False,
                     )
                     print("=== REAL EMAIL SENT SUCCESSFULLY ===")

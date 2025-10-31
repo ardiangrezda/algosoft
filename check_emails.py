@@ -41,7 +41,7 @@ def main():
     
     print("Current email setup:")
     print("✅ Backend: File-based (emails saved to files)")
-    print("✅ Recipient: ardian.grezda@hotmail.com")
+    print("✅ Recipient: ardian_grezda@outlook.com")
     print("✅ Directory: sent_emails/")
     print()
     

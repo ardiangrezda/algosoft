@@ -46,7 +46,7 @@ def test_gmail_connection():
             'Test Email from Algosoft II',
             'This is a test email to verify Gmail setup.',
             settings.EMAIL_HOST_USER,
-            ['ardian.grezda@hotmail.com'],
+            ['ardian_grezda@outlook.com'],
             fail_silently=False,
         )
         print("✅ Django send_mail successful!")
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     success = test_gmail_connection()
     if success:
         print("\n🎉 Gmail setup is working correctly!")
-        print("📧 Check ardian.grezda@hotmail.com for test email")
+        print("📧 Check ardian_grezda@outlook.com for test email")
     else:
         print("\n⚠️ Gmail setup needs attention")
         print("Check your Gmail App Password and account settings")

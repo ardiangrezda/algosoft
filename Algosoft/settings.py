@@ -125,6 +125,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', 'algosoftii.contact@gmail.com')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', 'algosoftii.contact@gmail.com')
-CONTACT_EMAIL = os.environ.get('CONTACT_EMAIL', 'ardian.grezda@hotmail.com')
+CONTACT_EMAIL = os.environ.get('CONTACT_EMAIL', 'ardian_grezda@outlook.com')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

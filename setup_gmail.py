@@ -26,7 +26,7 @@ STEPS TO SET UP GMAIL EMAIL SENDING:
 
 5. TEST THE SETUP:
    - Submit a contact form on your website
-   - Check if email arrives at ardian.grezda@hotmail.com
+   - Check if email arrives at ardian_grezda@outlook.com
 
 ALTERNATIVE - QUICK TEST MODE:
 If you want to test without setting up Gmail, change this in settings.py:
@@ -43,7 +43,7 @@ def main():
     print()
     print("Current email configuration:")
     print("- FROM: algosoftii.contact@gmail.com")
-    print("- TO: ardian.grezda@hotmail.com")
+    print("- TO: ardian_grezda@outlook.com")
     print("- METHOD: Gmail SMTP")
     print()
     print("TO COMPLETE SETUP:")
