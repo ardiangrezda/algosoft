@@ -3,7 +3,7 @@ import logging
 from django.http import HttpResponseRedirect
 from django.conf import settings
 from django.views.decorators.http import require_http_methods
-from django.views.decorators.csrf import csrf_protect
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
 
 logger = logging.getLogger(__name__)
@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 # Session key for storing language preference
 LANGUAGE_SESSION_KEY = '_language'
 
-@csrf_protect
+@csrf_exempt  # Language switching is not a security-critical operation
 @require_http_methods(["POST", "GET"])
 def set_language_custom(request):
     """
@@ -57,5 +57,6 @@ def set_language_custom(request):
         # Fail gracefully - redirect back
         referer = request.META.get('HTTP_REFERER', '/')
         return redirect(referer)
+
 
 
