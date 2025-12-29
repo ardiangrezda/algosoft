@@ -5,6 +5,7 @@ from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
 from django.utils import translation
+from django.http import HttpResponseRedirect
 
 logger = logging.getLogger(__name__)
 
@@ -31,10 +32,8 @@ def set_language_custom(request):
             logger.warning(f"Invalid language code requested: {lang}. Valid codes: {valid_langs}")
             return redirect(request.META.get('HTTP_REFERER', '/'))
         
-        # Activate and store language in session
+        # Activate language for this request (optional)
         translation.activate(lang)
-        request.session['django_language'] = lang
-        # Do not force session.save(); SessionMiddleware will persist it
         
         logger.info(f"Successfully switched language to: {lang}")
         
@@ -74,7 +73,18 @@ def set_language_custom(request):
             if next_url.endswith('/') and not rewritten.endswith('/'):
                 rewritten += '/'
 
-            return redirect(rewritten)
+            response = HttpResponseRedirect(rewritten)
+            # Prefer cookie over session to avoid DB issues on Heroku
+            # Use Django's LANGUAGE_COOKIE_NAME
+            secure = True if request.is_secure() or request.META.get('HTTP_X_FORWARDED_PROTO') == 'https' else False
+            response.set_cookie(
+                key=getattr(settings, 'LANGUAGE_COOKIE_NAME', 'django_language'),
+                value=lang,
+                max_age=60*60*24*365,  # 1 year
+                samesite='Lax',
+                secure=secure,
+            )
+            return response
         except Exception:
             # Fallback to referrer/root
             return redirect(request.META.get('HTTP_REFERER', '/'))
