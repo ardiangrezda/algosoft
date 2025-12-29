@@ -1,43 +1,61 @@
-"""Custom i18n view with better error handling"""
+"""Custom i18n view with better error handling for language switching"""
 import logging
-from django.views.i18n import set_language
-from django.conf import settings
 from django.http import HttpResponseRedirect
+from django.conf import settings
 from django.views.decorators.http import require_http_methods
+from django.views.decorators.csrf import csrf_protect
+from django.shortcuts import redirect
 
 logger = logging.getLogger(__name__)
 
+# Session key for storing language preference
 LANGUAGE_SESSION_KEY = '_language'
 
+@csrf_protect
 @require_http_methods(["POST", "GET"])
 def set_language_custom(request):
     """
-    Custom language setting view with better error handling.
-    Works around potential issues with Django's built-in i18n view.
+    Handle language switching with proper error handling.
+    
+    Accepts language via:
+    - POST parameter: 'language'
+    - GET parameter: 'language'
+    
+    Redirects back to HTTP_REFERER or root.
     """
     try:
+        # Get language from POST or GET
         lang = request.POST.get('language') or request.GET.get('language')
         
         if not lang:
-            logger.warning("No language parameter provided")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            logger.warning("No language parameter provided in request")
+            referer = request.META.get('HTTP_REFERER', '/')
+            return redirect(referer)
         
-        # Validate language choice
+        # Validate language is in configured languages
         valid_langs = [code for code, _ in settings.LANGUAGES]
         if lang not in valid_langs:
-            logger.warning(f"Invalid language: {lang}")
-            return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+            logger.warning(f"Invalid language code requested: {lang}. Valid codes: {valid_langs}")
+            referer = request.META.get('HTTP_REFERER', '/')
+            return redirect(referer)
         
-        # Store language in session
+        # Activate language in session
+        from django.utils import translation
+        translation.activate(lang)
         request.session[LANGUAGE_SESSION_KEY] = lang
-        request.session.save()
         
-        logger.info(f"Language changed to: {lang}")
+        # Use django's cookie approach too if configured
+        from django.middleware.locale import LANGUAGE_COOKIE_NAME
+        response = redirect(request.META.get('HTTP_REFERER', '/'))
+        response.set_cookie(LANGUAGE_COOKIE_NAME, lang, 365*24*60*60)
         
-        # Return to referrer or home
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        logger.info(f"Successfully switched language to: {lang}")
+        return response
     
     except Exception as e:
-        logger.error(f"Error in set_language: {str(e)}", exc_info=True)
-        return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+        logger.error(f"Error in set_language_custom view: {str(e)}", exc_info=True)
+        # Fail gracefully - redirect back
+        referer = request.META.get('HTTP_REFERER', '/')
+        return redirect(referer)
+
 
