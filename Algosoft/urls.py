@@ -19,11 +19,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from main import views
+from main.views_i18n import set_language_custom
 from django.utils.translation import gettext_lazy as _
 
 # Non-translated URLs
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
+    path('i18n/setlang/', set_language_custom, name='set_language_custom'),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
