@@ -34,12 +34,50 @@ def set_language_custom(request):
         # Activate and store language in session
         translation.activate(lang)
         request.session['django_language'] = lang
-        request.session.save()
+        # Do not force session.save(); SessionMiddleware will persist it
         
         logger.info(f"Successfully switched language to: {lang}")
         
-        # Redirect back to referrer
-        return redirect(request.META.get('HTTP_REFERER', '/'))
+        # Determine next URL and rewrite language prefix to selected lang
+        next_url = (
+            request.POST.get('next')
+            or request.GET.get('next')
+            or request.META.get('HTTP_REFERER')
+            or '/'
+        )
+
+        try:
+            # Normalize and rewrite prefix: /<lang>/...
+            # Build list of language codes for prefix matching
+            codes = [code for code, _ in settings.LANGUAGES]
+            # Ensure leading slash
+            if not next_url.startswith('/'):
+                # keep scheme/host if full URL
+                if '://' in next_url:
+                    from urllib.parse import urlparse
+                    parsed = urlparse(next_url)
+                    path = parsed.path or '/'
+                    next_url = path
+                else:
+                    next_url = '/' + next_url
+
+            parts = next_url.split('/')[1:]  # drop leading empty segment
+            if parts:
+                if parts[0] in codes:
+                    parts[0] = lang
+                else:
+                    parts.insert(0, lang)
+            else:
+                parts = [lang]
+            rewritten = '/' + '/'.join(parts)
+            # Always ensure trailing slash when original had it or at root
+            if next_url.endswith('/') and not rewritten.endswith('/'):
+                rewritten += '/'
+
+            return redirect(rewritten)
+        except Exception:
+            # Fallback to referrer/root
+            return redirect(request.META.get('HTTP_REFERER', '/'))
     
     except Exception as e:
         logger.error(f"Error in set_language_custom view: {str(e)}", exc_info=True)
