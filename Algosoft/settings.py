@@ -118,6 +118,9 @@ LOCALE_PATHS = [
     BASE_DIR / 'locale/',
 ]
 
+# Use signed cookie-based sessions to avoid database dependency on Heroku
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+
 # Email Configuration
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
