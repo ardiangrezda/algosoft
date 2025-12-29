@@ -1,1 +1,1 @@
-web: gunicorn  Algosoft.wsgi:application --log-file -
+release web: gunicorn  Algosoft.wsgi:application --log-file -
